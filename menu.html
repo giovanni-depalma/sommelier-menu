@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Restaurante Fusión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Menu</h1>
+        <a href="index.html" class="back-link">← Torna alla Home</a>
+    </header>
+
+    <div class="content-container" id="menu-container">
+        <!-- Menu items will be rendered here -->
+    </div>
+
+    <script type="module">
+        import menu from './data/menu.js';
+        import wines from './data/wines.js';
+
+        const container = document.getElementById('menu-container');
+
+        // Helper to find wine by ID
+        function getWineName(id) {
+            const wine = wines.find(w => w.id === id);
+            return wine ? `${wine.name} (${wine.producer})` : 'Chiedi al Sommelier';
+        }
+
+        menu.forEach(category => {
+            const section = document.createElement('section');
+            section.className = 'category-section';
+
+            const title = document.createElement('h2');
+            title.className = 'category-title';
+            title.textContent = category.category;
+            section.appendChild(title);
+
+            category.items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'item-card';
+
+                const pairingName = getWineName(item.pairing);
+
+                card.innerHTML = `
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3 class="item-name">${item.name}</h3>
+                            <span class="item-price">€ ${item.price}</span>
+                        </div>
+                        <p class="item-desc">${item.description}</p>
+                        <p class="wine-pairing"><span>Abbinamento consigliato:</span> ${pairingName}</p>
+                    </div>
+                `;
+                section.appendChild(card);
+            });
+
+            container.appendChild(section);
+        });
+    </script>
+</body>
+
+</html>
