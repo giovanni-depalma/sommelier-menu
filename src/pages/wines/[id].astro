@@ -17,7 +17,7 @@ const { wine } = Astro.props;
         <a
             href={import.meta.env.BASE_URL + "/wines"}
             class="back-link"
-            onclick="event.preventDefault(); history.back()"
+            onclick="history.back(); return false;"
             id="back-link">← Torna indietro</a
         >
 

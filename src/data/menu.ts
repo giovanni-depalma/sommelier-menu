@@ -78,7 +78,7 @@ const menu: MenuCategory[] = [
                 name: "Cochinillo Asado",
                 description: "Maialino da latte arrosto stile Segovia, pelle croccante e carne tenera.",
                 price: 32,
-                pairing: "re14", // Ribera del Duero
+                pairing: "red8", // Ribera del Duero
                 pairingReason: "L'untuosità marcata e la succulenza della carne di maialino necessitano dei tannini fitti e dell'acidità vibrante di un grande Ribera del Duero per ripulire la bocca ad ogni boccone."
             },
             {

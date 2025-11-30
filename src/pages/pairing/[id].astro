@@ -24,10 +24,10 @@ if (!wine) {
     <header class="page-header">
         <h1>L'Arte dell'Abbinamento</h1>
         <a
-            onclick="event.preventDefault(); history.back()"
             href={`${import.meta.env.BASE_URL}/menu`}
             class="back-link"
-            id="back-link">← Torna al Menu</a
+            id="back-link"
+            onclick="history.back(); return false;">← Torna al Menu</a
         >
     </header>
 
