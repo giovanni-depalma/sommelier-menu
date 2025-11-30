@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run build-pdf",
     "preview": "astro preview",
     "astro": "astro",
     "build-pdf": "node scripts/generate-pdfs.mjs"
