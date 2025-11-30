@@ -19,6 +19,7 @@ export interface MenuItem {
     description: string;
     price: number;
     pairing: string;
+    pairingReason?: string;
 }
 
 export interface MenuCategory {

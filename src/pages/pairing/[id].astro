@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import menu from "../../data/menu";
+import wines from "../../data/wines";
+
+export function getStaticPaths() {
+    // Flatten menu items to get all IDs
+    const allItems = menu.flatMap((category) => category.items);
+    return allItems.map((item) => ({
+        params: { id: item.id },
+        props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const wine = wines.find((w) => w.id === item.pairing);
+
+if (!wine) {
+    throw new Error(`Wine not found for pairing: ${item.pairing}`);
+}
+---
+
+<Layout title={`Abbinamento: ${item.name} - Restaurante Fusión`}>
+    <header class="page-header">
+        <h1>L'Arte dell'Abbinamento</h1>
+        <a
+            onclick="event.preventDefault(); history.back()"
+            href={`${import.meta.env.BASE_URL}/menu`}
+            class="back-link"
+            id="back-link">← Torna al Menu</a
+        >
+    </header>
+
+    <div class="content-container">
+        <div class="pairing-card">
+            <div class="dish-section">
+                <span class="label">Il Piatto</span>
+                <h2>{item.name}</h2>
+                <p>{item.description}</p>
+            </div>
+
+            <div class="pairing-icon">🍷 ↔️ 🍽️</div>
+
+            <div class="wine-section">
+                <span class="label">Il Vino</span>
+                <h2>
+                    <a
+                        href={`${import.meta.env.BASE_URL}/wines/${wine.id}`}
+                        class="wine-link"
+                    >
+                        {wine.name}
+                    </a>
+                </h2>
+                <p class="wine-subtitle">{wine.producer} - {wine.vintage}</p>
+                <p>{wine.type} - {wine.region}, {wine.country}</p>
+            </div>
+
+            <div class="reason-section">
+                <h3>Perché questo abbinamento?</h3>
+                <p class="reason-text">"{item.pairingReason}"</p>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .pairing-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .dish-section,
+    .wine-section {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background-color: #fcfcfc;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .dish-section:hover,
+    .wine-section:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .label {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: #999;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        color: var(--wine-red);
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .pairing-icon {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: var(--gold);
+        opacity: 0.8;
+    }
+
+    .wine-link {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px dotted var(--wine-red);
+        transition: all 0.2s;
+    }
+
+    .wine-link:hover {
+        border-bottom: 1px solid var(--wine-red);
+        color: black;
+    }
+
+    .wine-subtitle {
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 0.2rem;
+    }
+
+    .reason-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+
+    .reason-section h3 {
+        font-family: var(--font-accent);
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .reason-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-style: italic;
+        color: #444;
+        font-family: var(--font-heading);
+    }
+
+    @media (max-width: 768px) {
+        .pairing-card {
+            padding: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+</style>

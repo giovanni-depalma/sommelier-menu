@@ -49,7 +49,13 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
                                 <p class="item-desc">{item.description}</p>
                                 <p class="wine-pairing">
                                     <span>Abbinamento consigliato:</span>{" "}
-                                    {getWineName(item.pairing)}
+                                    <a
+                                        href={`${import.meta.env.BASE_URL}/pairing/${item.id}`}
+                                        class="pairing-link"
+                                    >
+                                        {getWineName(item.pairing)}{" "}
+                                        <span class="info-icon">ℹ️</span>
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -59,3 +65,34 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         }
     </div>
 </Layout>
+
+<style>
+    .pairing-link {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px dotted currentColor;
+        transition: all 0.2s;
+    }
+
+    .pairing-link:hover {
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .info-icon {
+        font-size: 0.8em;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+
+    @media print {
+        .info-icon {
+            display: none;
+        }
+
+        .pairing-link {
+            text-decoration: none;
+            border-bottom: none;
+        }
+    }
+</style>
