@@ -27,6 +27,11 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         >
     </header>
 
+    <div class="print-only qr-code-header">
+        <img src={qrCodeUrl} alt="QR Code Menu" />
+        <p>Scansiona per vedere il menu online</p>
+    </div>
+
     <div class="content-container" id="menu-container">
         {
             menu.map((category) => (
@@ -52,10 +57,5 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
                 </section>
             ))
         }
-    </div>
-
-    <div class="print-only">
-        <img src={qrCodeUrl} alt="QR Code Menu" />
-        <p>Scansiona per vedere il menu online</p>
     </div>
 </Layout>

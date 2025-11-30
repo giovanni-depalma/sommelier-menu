@@ -38,6 +38,11 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         >
     </header>
 
+    <div class="print-only qr-code-header">
+        <img src={qrCodeUrl} alt="QR Code Carta dei Vini" />
+        <p>Scansiona per vedere la carta dei vini online</p>
+    </div>
+
     <div class="content-container" id="wines-container">
         {
             Object.entries(categories).map(([type, wineList]) => {
@@ -83,11 +88,6 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
                 );
             })
         }
-    </div>
-
-    <div class="print-only">
-        <img src={qrCodeUrl} alt="QR Code Carta dei Vini" />
-        <p>Scansiona per vedere la carta dei vini online</p>
     </div>
 </Layout>
 

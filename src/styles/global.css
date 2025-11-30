@@ -349,18 +349,23 @@ h4 {
 
     .print-only {
         display: block;
-        margin-top: 1rem;
         text-align: center;
         page-break-inside: avoid;
     }
 
+    .qr-code-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #ddd;
+    }
+
     .print-only img {
-        max-width: 150px;
+        max-width: 120px;
         height: auto;
     }
 
     .print-only p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #555;
         margin-top: 0.5rem;
     }
