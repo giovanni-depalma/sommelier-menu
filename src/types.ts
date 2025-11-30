@@ -9,7 +9,7 @@ export interface WineItem {
     grape: string;
     price: number;
     description: string;
-    link?: string;
+    denomination: string;
     details?: string;
 }
 

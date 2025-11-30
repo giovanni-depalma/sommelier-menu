@@ -44,8 +44,8 @@ const { wine } = Astro.props;
                     <span class="value">{wine.grape}</span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Prezzo</span>
-                    <span class="value">€ {wine.price}</span>
+                    <span class="label">Denominazione</span>
+                    <span class="value">{wine.denomination}</span>
                 </div>
             </div>
 
@@ -56,20 +56,30 @@ const { wine } = Astro.props;
                 </p>
             </div>
 
-            {
-                wine.link && (
-                    <div class="wine-actions">
-                        <a
-                            href={wine.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="external-link"
-                        >
-                            Scopri di più sul sito del produttore ↗
-                        </a>
-                    </div>
-                )
-            }
+            <div class="wine-actions">
+                <a
+                    href={`https://www.google.com/search?q=${encodeURIComponent(`${wine.producer} ${wine.name} ${wine.vintage} wine`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="google-search-button"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    Cerca con Google
+                </a>
+            </div>
         </div>
     </div>
 </Layout>
@@ -181,19 +191,24 @@ const { wine } = Astro.props;
         border-top: 1px solid #eee;
     }
 
-    .external-link {
-        display: inline-block;
-        background-color: #333;
-        color: white;
+    .google-search-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #fff;
+        color: #333;
         padding: 0.8rem 1.5rem;
+        border: 2px solid #ddd;
         border-radius: 6px;
         text-decoration: none;
         font-weight: 500;
-        transition: background-color 0.2s;
+        transition: all 0.2s;
     }
 
-    .external-link:hover {
-        background-color: #000;
+    .google-search-button:hover {
+        background-color: #f8f9fa;
+        border-color: #4285f4;
+        color: #4285f4;
     }
 
     @media (max-width: 600px) {

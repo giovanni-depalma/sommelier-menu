@@ -185,6 +185,20 @@ h4 {
     margin-left: 1rem;
 }
 
+.item-denomination {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: var(--wine-red);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    float: right;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .item-desc {
     font-size: 0.95rem;
     color: #666;
@@ -320,6 +334,13 @@ h4 {
 
     .item-price {
         color: black;
+    }
+
+    .item-denomination {
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        padding: 0.2rem 0.5rem;
     }
 
     .wine-pairing {
