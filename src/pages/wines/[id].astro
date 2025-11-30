@@ -14,7 +14,10 @@ const { wine } = Astro.props;
 
 <Layout title={`${wine.name} - Sommelier Menu`}>
     <div class="container">
-        <a href={import.meta.env.BASE_URL + "/wines"} class="back-link"
+        <a
+            href={import.meta.env.BASE_URL + "/wines"}
+            class="back-link"
+            onclick="event.preventDefault(); history.back()"
             >← Torna alla Carta dei Vini</a
         >
 
