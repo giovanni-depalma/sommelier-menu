@@ -1,5 +1,6 @@
 :root {
-    --primary-color: #8a2be2; /* Deep purple/wine placeholder, will refine */
+    --primary-color: #8a2be2;
+    /* Deep purple/wine placeholder, will refine */
     --wine-red: #722F37;
     --gold: #D4AF37;
     --dark-bg: #1a1a1a;
@@ -25,7 +26,10 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 700;
 }
@@ -43,7 +47,8 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* Placeholder URL, ideally local */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    /* Placeholder URL, ideally local */
     background-size: cover;
     background-position: center;
 }
@@ -228,16 +233,28 @@ h1, h2, h3, h4 {
 }
 
 /* Print Styles */
+.print-only {
+    display: none;
+}
+
 @media print {
+    @page {
+        margin: 0;
+    }
+
     body {
         background-color: white;
         color: black;
+        padding: 2cm;
     }
 
-    .landing-page, .main-nav, .main-footer {
-        display: none; /* Don't print landing page elements if on subpages, or handle differently */
+    .landing-page,
+    .main-nav,
+    .main-footer {
+        display: none;
+        /* Don't print landing page elements if on subpages, or handle differently */
     }
-    
+
     /* If printing the menu/wine list pages */
     .page-header {
         background-color: white;
@@ -274,6 +291,24 @@ h1, h2, h3, h4 {
     .wine-pairing {
         color: #333;
     }
+
+    .print-only {
+        display: block;
+        margin-top: 2rem;
+        text-align: center;
+        page-break-inside: avoid;
+    }
+
+    .print-only img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .print-only p {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 0.5rem;
+    }
 }
 
 /* Mobile Responsive */
@@ -281,7 +316,7 @@ h1, h2, h3, h4 {
     .main-header h1 {
         font-size: 2.5rem;
     }
-    
+
     .item-card {
         flex-direction: column;
     }

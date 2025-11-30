@@ -4,6 +4,8 @@ import wines from "../data/wines";
 
 import type { WineItem } from "../types";
 
+import QRCode from "qrcode";
+
 // Group wines by type
 const categories: Record<string, WineItem[]> = {
     Bollicine: [],
@@ -18,6 +20,9 @@ wines.forEach((wine) => {
         categories[wine.type].push(wine);
     }
 });
+
+const fullUrl = new URL(Astro.url.pathname, Astro.site).href;
+const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
 ---
 
 <Layout title="Carta dei Vini - Restaurante Fusión">
@@ -66,5 +71,10 @@ wines.forEach((wine) => {
                 );
             })
         }
+    </div>
+
+    <div class="print-only">
+        <img src={qrCodeUrl} alt="QR Code Carta dei Vini" />
+        <p>Scansiona per vedere la carta dei vini online</p>
     </div>
 </Layout>

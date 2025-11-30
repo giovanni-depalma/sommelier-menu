@@ -3,10 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import menu from "../data/menu";
 import wines from "../data/wines";
 
+import QRCode from "qrcode";
+
 function getWineName(id: string) {
     const wine = wines.find((w) => w.id === id);
     return wine ? `${wine.name} (${wine.producer})` : "Chiedi al Sommelier";
 }
+
+const fullUrl = new URL(Astro.url.pathname, Astro.site).href;
+const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
 ---
 
 <Layout title="Menu - Restaurante Fusión">
@@ -42,5 +47,10 @@ function getWineName(id: string) {
                 </section>
             ))
         }
+    </div>
+
+    <div class="print-only">
+        <img src={qrCodeUrl} alt="QR Code Menu" />
+        <p>Scansiona per vedere il menu online</p>
     </div>
 </Layout>
