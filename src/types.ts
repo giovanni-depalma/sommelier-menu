@@ -9,6 +9,8 @@ export interface WineItem {
     grape: string;
     price: number;
     description: string;
+    link?: string;
+    details?: string;
 }
 
 export interface MenuItem {

@@ -241,7 +241,7 @@ h4 {
 
 @media print {
     @page {
-        margin: 0;
+        margin: 1cm;
     }
 
     body {
