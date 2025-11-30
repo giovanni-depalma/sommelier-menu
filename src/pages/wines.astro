@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import wines from "../data/wines";
+
+import type { WineItem } from "../types";
+
+// Group wines by type
+const categories: Record<string, WineItem[]> = {
+    Bollicine: [],
+    Bianchi: [],
+    Rosati: [],
+    Rossi: [],
+    "Passiti/Distillati": [],
+};
+
+wines.forEach((wine) => {
+    if (categories[wine.type]) {
+        categories[wine.type].push(wine);
+    }
+});
+---
+
+<Layout title="Carta dei Vini - Restaurante Fusión">
+    <header class="page-header">
+        <h1>Carta dei Vini</h1>
+        <a href="/" class="back-link">← Torna alla Home</a>
+    </header>
+
+    <div class="content-container" id="wines-container">
+        {
+            Object.entries(categories).map(([type, wineList]) => {
+                if (wineList.length === 0) return null;
+                return (
+                    <section class="category-section">
+                        <h2 class="category-title">{type}</h2>
+                        {wineList.map((wine) => (
+                            <div class="item-card wine-item-card">
+                                <div class="item-info">
+                                    <div class="item-header">
+                                        <h3 class="item-name">{wine.name}</h3>
+                                        <span class="item-price">
+                                            € {wine.price}
+                                        </span>
+                                    </div>
+                                    <div class="wine-item">
+                                        <div class="wine-details">
+                                            <span class="wine-producer">
+                                                {wine.producer}
+                                            </span>
+                                            <span class="wine-region">
+                                                {wine.region}, {wine.country}
+                                            </span>
+                                            <span class="wine-vintage">
+                                                {wine.vintage}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="item-desc">{wine.description}</p>
+                                    <p class="item-meta">{wine.grape}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </section>
+                );
+            })
+        }
+    </div>
+</Layout>

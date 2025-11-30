@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import menu from "../data/menu";
+import wines from "../data/wines";
+
+function getWineName(id: string) {
+    const wine = wines.find((w) => w.id === id);
+    return wine ? `${wine.name} (${wine.producer})` : "Chiedi al Sommelier";
+}
+---
+
+<Layout title="Menu - Restaurante Fusión">
+    <header class="page-header">
+        <h1>Menu</h1>
+        <a href="/" class="back-link">← Torna alla Home</a>
+    </header>
+
+    <div class="content-container" id="menu-container">
+        {
+            menu.map((category) => (
+                <section class="category-section">
+                    <h2 class="category-title">{category.category}</h2>
+                    {category.items.map((item) => (
+                        <div class="item-card">
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3 class="item-name">{item.name}</h3>
+                                    <span class="item-price">
+                                        € {item.price}
+                                    </span>
+                                </div>
+                                <p class="item-desc">{item.description}</p>
+                                <p class="wine-pairing">
+                                    <span>Abbinamento consigliato:</span>{" "}
+                                    {getWineName(item.pairing)}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+            ))
+        }
+    </div>
+</Layout>
