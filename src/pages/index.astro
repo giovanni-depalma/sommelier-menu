@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Restaurante Fusión - España & Italia" bodyClass="landing-page">
@@ -10,13 +10,13 @@ import Layout from '../layouts/Layout.astro';
 		</header>
 
 		<nav class="main-nav">
-			<a href="/menu" class="nav-card">
+			<a href={`${import.meta.env.BASE_URL}/menu`} class="nav-card">
 				<div class="card-content">
 					<h2>Menu</h2>
 					<p>Tapas, Paellas & Tradizione</p>
 				</div>
 			</a>
-			<a href="/wines" class="nav-card">
+			<a href={`${import.meta.env.BASE_URL}/wines`} class="nav-card">
 				<div class="card-content">
 					<h2>Carta dei Vini</h2>
 					<p>Selezione Sommelier</p>
@@ -29,5 +29,3 @@ import Layout from '../layouts/Layout.astro';
 		</footer>
 	</div>
 </Layout>
-
-
