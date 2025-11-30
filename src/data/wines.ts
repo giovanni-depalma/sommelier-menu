@@ -1,4 +1,6 @@
-const wines = [
+import type { WineItem } from '../types';
+
+const wines: WineItem[] = [
     // --- BOLLICINE (Sparkling) ---
     // Spain (Cava & Corpinnat)
     { id: 's1', name: "Cava Reserva de la Familia", producer: "Juvé & Camps", vintage: "2018", region: "Penedès", country: "Spagna", type: "Bollicine", grape: "Xarel·lo, Macabeo, Parellada", price: 45, description: "Cava iconico, brut nature, note di frutta bianca matura e tostatura." },
@@ -11,7 +13,7 @@ const wines = [
     { id: 's8', name: "Texturas de Pedra", producer: "Raventós i Blanc", vintage: "2016", region: "Conca del Riu Anoia", country: "Spagna", type: "Bollicine", grape: "Xarel·lo Vermell, Sumoll, Bastard Negre", price: 65, description: "Blanc de Noirs, strutturato, note di frutta rossa e spezie." },
     { id: 's9', name: "Reserva Particular", producer: "Recaredo", vintage: "2011", region: "Corpinnat", country: "Spagna", type: "Bollicine", grape: "Xarel·lo, Macabeo", price: 95, description: "Austero, profondo, note di frutta secca e mineralità calcarea." },
     { id: 's10', name: "III Lustros", producer: "Gramona", vintage: "2014", region: "Corpinnat", country: "Spagna", type: "Bollicine", grape: "Xarel·lo, Macabeo", price: 70, description: "Cremoso, note di mela cotogna, erbe aromatiche e brioche." },
-    
+
     // Italy (Franciacorta, Trento, Oltrepò)
     { id: 'i1', name: "Franciacorta Cuvée Prestige", producer: "Ca' del Bosco", vintage: "NV", region: "Lombardia", country: "Italia", type: "Bollicine", grape: "Chardonnay, Pinot Nero", price: 55, description: "Classico, equilibrato, note di pesca e mandorla." },
     { id: 'i2', name: "Franciacorta Satèn", producer: "Bellavista", vintage: "2017", region: "Lombardia", country: "Italia", type: "Bollicine", grape: "Chardonnay", price: 65, description: "Morbido, setoso, perlage finissimo, note di fiori bianchi." },

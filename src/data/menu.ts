@@ -1,4 +1,6 @@
-const menu = [
+import type { MenuCategory } from '../types';
+
+const menu: MenuCategory[] = [
     {
         category: "Tapas y Entradas",
         items: [
