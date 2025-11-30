@@ -1,0 +1,42 @@
+---
+import type { WineItem } from "../types";
+
+interface Props {
+    wine: WineItem;
+}
+
+const { wine } = Astro.props;
+---
+
+<div class="item-card wine-item-card">
+    <div class="item-info">
+        <div class="item-header">
+            <h3 class="item-name">
+                <a
+                    href={`${import.meta.env.BASE_URL}/wines/${wine.id}`}
+                    class="wine-link"
+                >
+                    {wine.name}
+                </a>
+            </h3>
+            <span class="item-denomination">
+                {wine.denomination}
+            </span>
+        </div>
+        <div class="wine-item">
+            <div class="wine-details">
+                <span class="wine-producer">
+                    {wine.producer}
+                </span>
+                <span class="wine-region">
+                    {wine.region}, {wine.country}
+                </span>
+                <span class="wine-vintage">
+                    {wine.vintage}
+                </span>
+            </div>
+        </div>
+        <p class="item-desc">{wine.description}</p>
+        <p class="item-meta">{wine.grape}</p>
+    </div>
+</div>

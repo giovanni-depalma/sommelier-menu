@@ -1,25 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import wines from "../data/wines";
-
-import type { WineItem } from "../types";
-
 import QRCode from "qrcode";
+import WineCard from "../components/WineCard.astro";
+import {
+    groupWinesByTypeCountryRegion,
+    getSortedCountries,
+} from "../utils/wineGrouping";
 
-// Group wines by type
-const categories: Record<string, WineItem[]> = {
-    Bollicine: [],
-    Bianchi: [],
-    Rosati: [],
-    Rossi: [],
-    "Passiti/Distillati": [],
-};
-
-wines.forEach((wine) => {
-    if (categories[wine.type]) {
-        categories[wine.type].push(wine);
-    }
-});
+// Group wines using utility function
+const categories = groupWinesByTypeCountryRegion(wines);
 
 const fullUrl = new URL(Astro.url.pathname, Astro.site).href;
 const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
@@ -45,45 +35,43 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
 
     <div class="content-container" id="wines-container">
         {
-            Object.entries(categories).map(([type, wineList]) => {
-                if (wineList.length === 0) return null;
+            Object.entries(categories).map(([type, countryMap]) => {
+                const sortedCountries = getSortedCountries(countryMap);
+                if (sortedCountries.length === 0) return null;
+
                 return (
                     <section class="category-section">
                         <h2 class="category-title">{type}</h2>
-                        {wineList.map((wine) => (
-                            <div class="item-card wine-item-card">
-                                <div class="item-info">
-                                    <div class="item-header">
-                                        <h3 class="item-name">
-                                            <a
-                                                href={`${import.meta.env.BASE_URL}/wines/${wine.id}`}
-                                                class="wine-link"
-                                            >
-                                                {wine.name}
-                                            </a>
-                                        </h3>
-                                        <span class="item-denomination">
-                                            {wine.denomination}
-                                        </span>
-                                    </div>
-                                    <div class="wine-item">
-                                        <div class="wine-details">
-                                            <span class="wine-producer">
-                                                {wine.producer}
-                                            </span>
-                                            <span class="wine-region">
-                                                {wine.region}, {wine.country}
-                                            </span>
-                                            <span class="wine-vintage">
-                                                {wine.vintage}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <p class="item-desc">{wine.description}</p>
-                                    <p class="item-meta">{wine.grape}</p>
+
+                        {sortedCountries.map((country) => {
+                            const data = countryMap[country];
+                            const hasRegions =
+                                Object.keys(data.regions).length > 0;
+
+                            if (!hasRegions) return null;
+
+                            return (
+                                <div class="country-section">
+                                    <h3 class="country-title">{country}</h3>
+
+                                    {/* Render Regions for all countries */}
+                                    {Object.keys(data.regions)
+                                        .sort()
+                                        .map((region) => (
+                                            <div class="region-group">
+                                                <h4 class="region-title">
+                                                    {region}
+                                                </h4>
+                                                {data.regions[region].map(
+                                                    (wine) => (
+                                                        <WineCard wine={wine} />
+                                                    ),
+                                                )}
+                                            </div>
+                                        ))}
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </section>
                 );
             })
@@ -104,11 +92,56 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         color: #000;
     }
 
+    .country-section {
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+    }
+
+    .country-title {
+        font-family: var(--font-heading);
+        font-size: 1.6rem;
+        color: #444;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    .region-group {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+    }
+
+    .region-title {
+        font-family: var(--font-accent);
+        font-size: 1.3rem;
+        color: var(--gold);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
     @media print {
         .wine-link {
             text-decoration: none;
             border-bottom: none;
             color: black;
+        }
+
+        .country-title {
+            font-size: 1.4rem;
+            border-bottom: 1px solid #000;
+            margin-top: 1.5rem;
+        }
+
+        .region-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 1rem;
+        }
+
+        .country-section,
+        .region-group {
+            padding-left: 0;
+            margin-bottom: 1rem;
         }
     }
 </style>
