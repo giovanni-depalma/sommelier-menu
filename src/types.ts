@@ -13,13 +13,19 @@ export interface WineItem {
     details?: string;
 }
 
+
+export interface Pairing {
+    wineId: string;
+    reason: string;
+}
+
 export interface MenuItem {
     id: string;
     name: string;
     description: string;
     price: number;
-    pairing: string;
-    pairingReason?: string;
+    pairingItalian: Pairing;
+    pairingSpanish: Pairing;
 }
 
 export interface MenuCategory {

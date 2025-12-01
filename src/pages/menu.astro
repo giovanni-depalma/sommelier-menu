@@ -48,13 +48,28 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
                                 </div>
                                 <p class="item-desc">{item.description}</p>
                                 <p class="wine-pairing">
-                                    <span>Abbinamento consigliato:</span>{" "}
+                                    <span class="pairing-label">
+                                        Abbinamenti:
+                                    </span>
                                     <a
                                         href={`${import.meta.env.BASE_URL}/pairing/${item.id}`}
                                         class="pairing-link"
                                     >
-                                        {getWineName(item.pairing)}{" "}
-                                        <span class="info-icon">ℹ️</span>
+                                        <span class="pairing-line">
+                                            <span class="flag">🇪🇸</span>{" "}
+                                            {getWineName(
+                                                item.pairingSpanish.wineId,
+                                            )}
+                                        </span>
+                                        <span class="pairing-line">
+                                            <span class="flag">🇮🇹</span>{" "}
+                                            {getWineName(
+                                                item.pairingItalian.wineId,
+                                            )}
+                                        </span>
+                                        <span class="info-text">
+                                            Scopri l'abbinamento ℹ️
+                                        </span>
                                     </a>
                                 </p>
                             </div>
@@ -86,7 +101,8 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
     }
 
     @media print {
-        .info-icon {
+        .info-icon,
+        .info-text {
             display: none;
         }
 
@@ -94,5 +110,34 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
             text-decoration: none;
             border-bottom: none;
         }
+    }
+
+    .pairing-line {
+        display: block;
+        margin-top: 0.3rem;
+    }
+
+    .flag {
+        font-size: 1.1em;
+        margin-right: 0.3rem;
+    }
+
+    .info-text {
+        font-size: 0.8em;
+        color: #666;
+        display: block;
+        margin-top: 0.5rem;
+        font-style: italic;
+        text-align: right;
+    }
+
+    .pairing-label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.2rem;
+        color: #888;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 </style>

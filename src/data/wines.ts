@@ -258,77 +258,7 @@ const wines: WineItem[] = [
         details: "Contratto è una cantina storica, la prima a produrre spumante metodo classico in Italia nel 1919. Questa Alta Langa Riserva è un Pas Dosé (senza zuccheri aggiunti) che esprime il terroir calcareo piemontese. Verticale, sapido, quasi salato, con note di scorza di limone e lievito fresco."
     },
 
-    // France (Champagne)
-    {
-        id: 'f1',
-        name: "Champagne Brut Imperial",
-        producer: "Moët & Chandon",
-        vintage: "NV",
-        region: "Champagne",
-        country: "Francia",
-        type: "Bollicine",
-        grape: "Pinot Noir, Meunier, Chardonnay",
-        price: 70,
-        denomination: "A.O.C. Champagne",
-        description: "Vibrante, generoso, note di mela verde e fiori bianchi.",
-        details: "Lo Champagne più famoso al mondo. Il Brut Impérial è l'incarnazione dello stile Moët: un frutto vibrante, un palato seducente e una maturità elegante. Note di mela verde, agrumi, fiori bianchi e sfumature minerali e di brioche."
-    },
-    {
-        id: 'f2',
-        name: "Champagne Grande Cuvée",
-        producer: "Krug",
-        vintage: "169ème",
-        region: "Champagne",
-        country: "Francia",
-        type: "Bollicine",
-        grape: "Pinot Noir, Chardonnay, Meunier",
-        price: 250,
-        denomination: "A.O.C. Champagne",
-        description: "Sinfonia di aromi, tostatura, frutta secca, agrumi canditi.",
-        details: "Krug Grande Cuvée nasce dal sogno di Joseph Krug di offrire il miglior Champagne ogni anno, indipendentemente dalle variazioni climatiche. È un assemblaggio di oltre 120 vini di più di 10 annate diverse. Una sinfonia di aromi: nocciole tostate, torrone, gelatina di frutta, agrumi, mandorle, brioche e miele."
-    },
-    {
-        id: 'f3',
-        name: "Champagne Special Cuvée",
-        producer: "Bollinger",
-        vintage: "NV",
-        region: "Champagne",
-        country: "Francia",
-        type: "Bollicine",
-        grape: "Pinot Noir, Chardonnay, Meunier",
-        price: 85,
-        denomination: "A.O.C. Champagne",
-        description: "Struttura, vinosità, note di pera, spezie e noci fresche.",
-        details: "Lo stile Bollinger è inconfondibile: dominato dal Pinot Noir, fermentato in parte in legno, con un uso sapiente dei vini di riserva. Special Cuvée è ricco, vinoso e strutturato. Offre aromi di pera matura, spezie, noci fresche e mela cotogna. Uno Champagne gastronomico per eccellenza."
-    },
-    {
-        id: 'f4',
-        name: "Champagne Blanc de Blancs",
-        producer: "Ruinart",
-        vintage: "NV",
-        region: "Champagne",
-        country: "Francia",
-        type: "Bollicine",
-        grape: "Chardonnay",
-        price: 110,
-        denomination: "A.O.C. Champagne",
-        description: "Puro, luminoso, note di agrumi e fiori bianchi.",
-        details: "Ruinart è la più antica Maison di Champagne (1729). Il suo Blanc de Blancs è l'emblema del gusto Ruinart. Prodotto esclusivamente con Chardonnay, è luminoso, puro e avvolgente. Note intense di agrumi freschi, gelsomino e pesca bianca. La bottiglia trasparente ne esalta il colore dorato."
-    },
-    {
-        id: 'f5',
-        name: "Champagne Cristal",
-        producer: "Louis Roederer",
-        vintage: "2014",
-        region: "Champagne",
-        country: "Francia",
-        type: "Bollicine",
-        grape: "Pinot Noir, Chardonnay",
-        price: 320,
-        denomination: "A.O.C. Champagne Millesimato",
-        description: "Perfezione, setoso, gessoso, frutti bianchi e mandorla.",
-        details: "Creato nel 1876 per lo Zar Alessandro II, il Cristal è il primo Champagne di prestigio della storia. Prodotto solo nelle grandi annate da uve di proprietà classificate Grand Cru. Il 2014 è un vino di purezza cristallina, gessoso, con una texture setosa e note di frutti bianchi, mandorla e agrumi canditi."
-    },
+
 
     // --- BIANCHI (Whites) 🍇 ---
     // Spain
@@ -685,77 +615,7 @@ const wines: WineItem[] = [
         details: "Un vino mitologico, artigianale e senza compromessi. Edoardo Valentini (e ora il figlio Francesco) ha creato un Trebbiano capace di invecchiare per 50 anni. Spesso ridotto o chiuso in gioventù, si apre con il tempo regalando emozioni uniche: caffè, terra bagnata, funghi, agrumi e spezie. Un'esperienza mistica."
     },
 
-    // France
-    {
-        id: 'w26',
-        name: "Chablis Grand Cru Les Clos",
-        producer: "William Fèvre",
-        vintage: "2018",
-        region: "Borgogna",
-        country: "Francia",
-        type: "Bianchi",
-        grape: "Chardonnay",
-        price: 130,
-        denomination: "A.O.C. Chablis Grand Cru",
-        description: "Teso, minerale, ostrica, limone, grandioso.",
-        details: "Les Clos è il più grande e famoso Grand Cru di Chablis. William Fèvre ne produce una versione magistrale. Un vino austero, verticale, dominato dal terroir Kimmeridgiano (gesso e fossili marini). Note di iodio, guscio d'ostrica, limone e fiori bianchi. Potente e destinato a lungo invecchiamento."
-    },
-    {
-        id: 'w27',
-        name: "Sancerre Les Monts Damnés",
-        producer: "François Cotat",
-        vintage: "2019",
-        region: "Loira",
-        country: "Francia",
-        type: "Bianchi",
-        grape: "Sauvignon Blanc",
-        price: 75,
-        denomination: "A.O.C. Sancerre",
-        description: "Puro, gessoso, agrumi, fiori bianchi, longevo.",
-        details: "Les Monts Damnés è un vigneto leggendario a Chavignol, con pendenze vertiginose e suolo gessoso ('terres blanches'). François Cotat produce un Sauvignon Blanc atipico: ricco, strutturato, capace di invecchiare decenni. Note di agrumi, fiori bianchi, tartufo e una mineralità gessosa inconfondibile."
-    },
-    {
-        id: 'w28',
-        name: "Meursault",
-        producer: "Coche-Dury",
-        vintage: "2017",
-        region: "Borgogna",
-        country: "Francia",
-        type: "Bianchi",
-        grape: "Chardonnay",
-        price: 450,
-        denomination: "A.O.C. Meursault",
-        description: "Leggendario, nocciola tostata, burro, tensione vibrante.",
-        details: "Coche-Dury è un mito della Borgogna. Anche il suo 'semplice' Meursault Village supera molti Premier Cru. Famoso per le sue note di riduzione nobile: sesamo tostato, nocciola, fiammifero. In bocca ha una tensione vibrante, un'acidità elettrica e una ricchezza burrosa perfettamente bilanciata."
-    },
-    {
-        id: 'w29',
-        name: "Condrieu La Doriane",
-        producer: "Guigal",
-        vintage: "2019",
-        region: "Rodano",
-        country: "Francia",
-        type: "Bianchi",
-        grape: "Viognier",
-        price: 110,
-        denomination: "A.O.C. Condrieu",
-        description: "Opulento, albicocca, violetta, speziato.",
-        details: "La massima espressione del Viognier. La Doriane è un Condrieu opulento, fermentato in legno nuovo. Un profumo inebriante di albicocca, pesca, violetta e spezie dolci. In bocca è grasso, viscoso, quasi oleoso, ma con una freschezza finale che evita la pesantezza. Un vino edonistico."
-    },
-    {
-        id: 'w30',
-        name: "Alsace Riesling Cuvée Frédéric Émile",
-        producer: "Trimbach",
-        vintage: "2013",
-        region: "Alsazia",
-        country: "Francia",
-        type: "Bianchi",
-        grape: "Riesling",
-        price: 85,
-        denomination: "A.O.C. Alsace",
-        description: "Secco, petrolio, agrumi canditi, minerale.",
-        details: "Trimbach è sinonimo di Riesling alsaziano secco, puro e minerale. La Cuvée Frédéric Émile proviene dai Grand Cru Geisberg e Osterberg. È un vino austero, che ha bisogno di tempo. Note di idrocarburi (petrolio), agrumi canditi, pesca bianca e una mineralità pietrosa. Tagliente e lunghissimo."
-    },
+
 
     // --- ROSATI (Rosés) 🌹 ---
     // Spain
@@ -902,49 +762,7 @@ const wines: WineItem[] = [
         details: "Il Rosa dei Frati è l'interpretazione del Chiaretto di Ca' dei Frati. Un vino delicato ed elegante. Colore rosa salmone. Profuma di pesca bianca, mela verde, fiori di mandorlo e biancospino. In bocca è fresco, sapido e leggero, perfetto come aperitivo o con piatti estivi."
     },
 
-    // France
-    {
-        id: 'r11',
-        name: "Bandol Rosé",
-        producer: "Domaine Tempier",
-        vintage: "2020",
-        region: "Provenza",
-        country: "Francia",
-        type: "Rosati",
-        grape: "Mourvèdre",
-        price: 45,
-        denomination: "A.O.C. Bandol",
-        description: "Il re dei rosati, strutturato, spezie, agrumi.",
-        details: "Considerato da molti il miglior rosato del mondo. Domaine Tempier crea un Bandol dominato dal Mourvèdre che ha la struttura di un rosso. Complesso, con note di agrumi, pesca, spezie e gariga. In bocca è potente, minerale e lunghissimo. Può invecchiare magnificamente per anni."
-    },
-    {
-        id: 'r12',
-        name: "Tavel",
-        producer: "Château d'Aqueria",
-        vintage: "2020",
-        region: "Rodano",
-        country: "Francia",
-        type: "Rosati",
-        grape: "Grenache, Cinsault",
-        price: 30,
-        denomination: "A.O.C. Tavel",
-        description: "Intenso, colorato, frutta rossa matura, vinoso.",
-        details: "Tavel è l'unica AOC francese dedicata esclusivamente al vino rosato. Château d'Aqueria ne è un interprete storico. Un rosato dal colore intenso, quasi rubino chiaro. Profuma di fragola matura, lampone e spezie. In bocca è rotondo, vinoso e strutturato, un vero 'rosato gastronomico'."
-    },
-    {
-        id: 'r13',
-        name: "Côtes de Provence Rosé",
-        producer: "Miraval",
-        vintage: "2021",
-        region: "Provenza",
-        country: "Francia",
-        type: "Rosati",
-        grape: "Cinsault, Grenache",
-        price: 35,
-        denomination: "A.O.C. Côtes de Provence",
-        description: "Elegante, pallido, fiori bianchi, fragola.",
-        details: "Il rosato che ha rilanciato la moda della Provenza nel mondo. Prodotto dalla famiglia Perrin a Château Miraval. Colore rosa pallidissimo. Profumi delicati di fiori bianchi, fragola fresca e agrumi. In bocca è elegante, minerale e rinfrescante, con un finale salino."
-    },
+
 
     // --- ROSSI (Reds) 🍷 ---
     // Spain
@@ -1327,6 +1145,21 @@ const wines: WineItem[] = [
         details: "Un Tempranillo moderno e fruttato dalla Rioja Alavesa. La macerazione carbonica parziale esalta il frutto. Note intense di frutti neri, caffè e spezie dolci. Morbido, rotondo e con tannini vellutati. Un Rioja che punta sulla piacevolezza immediata."
     },
 
+    {
+        id: 'red17',
+        name: "Ultreia Saint Jacques",
+        producer: "Raúl Pérez",
+        vintage: "2020",
+        region: "Bierzo",
+        country: "Spagna",
+        type: "Rossi",
+        grape: "Mencía",
+        price: 25,
+        denomination: "D.O. Bierzo",
+        description: "Fresco, floreale, pepe, beva compulsiva.",
+        details: "Forse il miglior rapporto qualità-prezzo di Spagna. Raúl Pérez vinifica questo Mencía con il raspo, in tini di legno. È un vino gioioso, fresco, floreale (violetta) e speziato (pepe nero). Ha una beva compulsiva e una leggerezza che conquista. Il Bierzo quotidiano."
+    },
+
     // Italy
     {
         id: 'red25',
@@ -1553,133 +1386,7 @@ const wines: WineItem[] = [
         details: "La Gran Selezione Bellavista di Castello di Ama è un Sangiovese di grande finezza. Proviene da un singolo vigneto. Note di ciliegia scura, viola, terra e una spiccata mineralità. Tannini eleganti e un'acidità vibrante. Un Chianti Classico di altissimo livello."
     },
 
-    // France
-    {
-        id: 're41',
-        name: "Château Margaux",
-        producer: "Château Margaux",
-        vintage: "2010",
-        region: "Bordeaux",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Cabernet Sauvignon blend",
-        price: 900,
-        denomination: "A.O.C. Margaux Premier Cru Classé",
-        description: "La regina di Bordeaux, profumo inebriante, seta.",
-        details: "Il vino più elegante di Bordeaux. Château Margaux è la quintessenza della finezza. Profumi inebrianti di violetta, cassis, cedro e tabacco. In bocca è setoso, con tannini finissimi e una persistenza infinita. La 'regina' dei Premier Cru."
-    },
-    {
-        id: 're42',
-        name: "Château Latour",
-        producer: "Château Latour",
-        vintage: "2009",
-        region: "Bordeaux",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Cabernet Sauvignon blend",
-        price: 1200,
-        denomination: "A.O.C. Pauillac Premier Cru Classé",
-        description: "Potenza, struttura, longevità secolare.",
-        details: "Il più potente e longevo dei Premier Cru di Bordeaux. Château Latour è un vino di incredibile struttura e concentrazione. Richiede decenni per esprimersi. Note di cassis, grafite, tabacco e terra. Tannini massicci ma nobili. Un vino per l'eternità."
-    },
-    {
-        id: 're43',
-        name: "Romanée-Conti",
-        producer: "DRC",
-        vintage: "2014",
-        region: "Borgogna",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Pinot Noir",
-        price: 15000,
-        denomination: "A.O.C. Romanée-Conti Grand Cru",
-        description: "Il Graal. Indescrivibile.",
-        details: "Il vino più mitico e costoso del mondo. Romanée-Conti è un'esperienza trascendente. Un Pinot Noir di una complessità e profondità inarrivabili. Note di rosa, ciliegia, tartufo, spezie e terra. Etereo, vibrante, con una persistenza che non finisce mai. Il Graal."
-    },
-    {
-        id: 're44',
-        name: "La Tâche",
-        producer: "DRC",
-        vintage: "2014",
-        region: "Borgogna",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Pinot Noir",
-        price: 4000,
-        denomination: "A.O.C. La Tâche Grand Cru",
-        description: "Speziato, potente, complesso, regale.",
-        details: "Un altro Grand Cru leggendario della DRC. La Tâche è spesso considerato più potente e speziato della Romanée-Conti. Note di pepe nero, cannella, ciliegia, terra e fiori secchi. Struttura imponente ma con la tipica eleganza del Pinot Noir. Un vino regale."
-    },
-    {
-        id: 're45',
-        name: "Châteauneuf-du-Pape",
-        producer: "Château Rayas",
-        vintage: "2009",
-        region: "Rodano",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Grenache",
-        price: 1500,
-        denomination: "A.O.C. Châteauneuf-du-Pape",
-        description: "Sabbia, fragola, pepe bianco, etereo.",
-        details: "Il Châteauneuf-du-Pape più iconico e ricercato. Rayas è un Grenache in purezza, vinificato in modo tradizionale. Un vino etereo, quasi borgognone, con note di fragola, lampone, pepe bianco, fiori e sabbia. Incredibile finezza e longevità."
-    },
-    {
-        id: 'red17',
-        name: "Ultreia Saint Jacques",
-        producer: "Raúl Pérez",
-        vintage: "2020",
-        region: "Bierzo",
-        country: "Spagna",
-        type: "Rossi",
-        grape: "Mencía",
-        price: 25,
-        denomination: "D.O. Bierzo",
-        description: "Fresco, floreale, pepe, beva compulsiva.",
-        details: "Forse il miglior rapporto qualità-prezzo di Spagna. Raúl Pérez vinifica questo Mencía con il raspo, in tini di legno. È un vino gioioso, fresco, floreale (violetta) e speziato (pepe nero). Ha una beva compulsiva e una leggerezza che conquista. Il Bierzo quotidiano."
-    },
-    {
-        id: 're46',
-        name: "Côte-Rôtie La Landonne",
-        producer: "Guigal",
-        vintage: "2015",
-        region: "Rodano",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Syrah",
-        price: 400,
-        denomination: "A.O.C. Côte-Rôtie",
-        description: "Scuro, bacon, olive nere, tannino massiccio.",
-        details: "Uno dei 'La La La' di Guigal, i cru più prestigiosi della Côte-Rôtie. La Landonne è un Syrah in purezza, potente e scuro. Note di bacon affumicato, olive nere, cassis, pepe e violetta. Tannini massicci ma levigati. Un vino di grande intensità e longevità."
-    },
-    {
-        id: 're47',
-        name: "Château Haut-Brion",
-        producer: "Château Haut-Brion",
-        vintage: "2015",
-        region: "Bordeaux",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Merlot, Cabernet",
-        price: 700,
-        denomination: "A.O.C. Pessac-Léognan Premier Cru Classé",
-        description: "Fumè, tabacco, terra calda, unico.",
-        details: "L'unico Premier Cru di Graves. Haut-Brion è famoso per il suo carattere fumé e terroso. Un blend di Merlot e Cabernet. Note di tabacco, cuoio, terra calda, grafite e frutti neri. Un vino di grande complessità e unicità, con una texture vellutata."
-    },
-    {
-        id: 're48',
-        name: "Pommard Les Rugiens",
-        producer: "De Courcel",
-        vintage: "2016",
-        region: "Borgogna",
-        country: "Francia",
-        type: "Rossi",
-        grape: "Pinot Noir",
-        price: 120,
-        denomination: "A.O.C. Pommard Premier Cru",
-        description: "Maschile, ferroso, strutturato, longevo.",
-        details: "Pommard è noto per i suoi Pinot Noir più robusti e maschili. Les Rugiens è uno dei suoi Premier Cru più celebri. Un vino strutturato, con note di frutti rossi scuri, ferro, terra e spezie. Richiede tempo per ammorbidire i suoi tannini. Grande potenziale di invecchiamento."
-    },
+
 
     // --- PASSITI / DISTILLATI (Sweet & Spirits) 🍯 ---
     // Spain
@@ -1821,48 +1528,7 @@ const wines: WineItem[] = [
         description: "Sole, datteri, spezie, non stucchevole."
     },
 
-    // France
-    {
-        id: 'p11',
-        name: "Château d'Yquem",
-        producer: "Château d'Yquem",
-        vintage: "2015",
-        region: "Sauternes",
-        country: "Francia",
-        type: "Passiti/Distillati",
-        grape: "Sémillon, Sauvignon",
-        price: 450,
-        denomination: "A.O.C. Sauternes Premier Cru Supérieur",
-        description: "Luce liquida, zafferano, botrytis, infinito.",
-        details: "Il Re indiscusso dei vini dolci. Château d'Yquem è l'unico Premier Cru Supérieur di Sauternes. La muffa nobile (Botrytis Cinerea) trasforma l'uva in oro liquido. Complesso, con note di zafferano, albicocca candita, miele, fiori bianchi e vaniglia. Equilibrio perfetto tra dolcezza e acidità."
-    },
-    {
-        id: 'p12',
-        name: "Cognac XO",
-        producer: "Hennessy",
-        vintage: "NV",
-        region: "Cognac",
-        country: "Francia",
-        type: "Passiti/Distillati",
-        grape: "Distillato",
-        price: 180,
-        denomination: "A.O.C. Cognac XO",
-        description: "Complesso, cuoio, spezie, rotondo."
-    },
-    {
-        id: 'p13',
-        name: "Bas-Armagnac",
-        producer: "Darroze",
-        vintage: "1980",
-        region: "Guascogna",
-        country: "Francia",
-        type: "Passiti/Distillati",
-        grape: "Distillato",
-        price: 150,
-        denomination: "A.O.C. Bas-Armagnac Millesimato",
-        description: "Rustico, prugna secca, carattere, fuoco.",
-        details: "Darroze è un selezionatore di Armagnac che imbottiglia distillati di singole annate e produttori. Questo Bas Armagnac del 1980 è un distillato di grande carattere. Note di prugna secca, fico, cuoio, tabacco e spezie. Caldo, avvolgente e con un finale lunghissimo. Un vero fuoco d'artificio."
-    }
+
 ];
 
 export default wines;
