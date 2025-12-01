@@ -100,18 +100,6 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         opacity: 0.7;
     }
 
-    @media print {
-        .info-icon,
-        .info-text {
-            display: none;
-        }
-
-        .pairing-link {
-            text-decoration: none;
-            border-bottom: none;
-        }
-    }
-
     .pairing-line {
         display: block;
         margin-top: 0.3rem;
@@ -139,5 +127,17 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         font-size: 0.9em;
         text-transform: uppercase;
         letter-spacing: 1px;
+    }
+
+    @media print {
+        .info-icon,
+        .info-text {
+            display: none;
+        }
+
+        .pairing-link {
+            text-decoration: none;
+            border-bottom: none;
+        }
     }
 </style>
