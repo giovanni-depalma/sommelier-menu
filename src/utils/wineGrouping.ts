@@ -35,6 +35,15 @@ export function groupWinesByTypeCountryRegion(wines: WineItem[]): CategoryMap {
         }
     });
 
+    // Sort wines by alcohol content within each region
+    Object.values(categories).forEach((countryMap) => {
+        Object.values(countryMap).forEach((data) => {
+            Object.values(data.regions).forEach((regionWines) => {
+                regionWines.sort((a, b) => a.alcohol - b.alcohol);
+            });
+        });
+    });
+
     return categories;
 }
 

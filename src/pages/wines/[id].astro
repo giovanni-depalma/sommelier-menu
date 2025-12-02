@@ -26,7 +26,11 @@ const { wine } = Astro.props;
                 <h1>{wine.name}</h1>
                 <div class="wine-meta">
                     <span class="producer">{wine.producer}</span>
-                    <span class="vintage">{wine.vintage}</span>
+                    {
+                        wine.vintage && (
+                            <span class="vintage">{wine.vintage}</span>
+                        )
+                    }
                 </div>
             </header>
 
@@ -46,6 +50,10 @@ const { wine } = Astro.props;
                 <div class="info-item">
                     <span class="label">Denominazione</span>
                     <span class="value">{wine.denomination}</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Alcolicità</span>
+                    <span class="value">{wine.alcohol}% Vol.</span>
                 </div>
             </div>
 

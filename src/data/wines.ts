@@ -15,7 +15,8 @@ const wines: WineItem[] = [
         price: 45,
         denomination: "D.O. Cava Gran Reserva",
         description: "Cava iconico, brut nature, note di frutta bianca matura e tostatura.",
-        details: "Il Cava Reserva de la Familia è l'icona di Juvé & Camps. Un Brut Nature Gran Reserva ottenuto dal mosto fiore delle uve delle tenute di Espiells, Can Massana e La Cuscona. Affina per una media di 36 mesi in bottiglia sui propri lieviti. Al naso offre note profonde di frutta bianca matura, pesca e mela al forno, con sfumature di brioche e spezie. In bocca è ampio, cremoso e persistente, perfetto per accompagnare tutto il pasto."
+        details: "Il Cava Reserva de la Familia è l'icona di Juvé & Camps. Un Brut Nature Gran Reserva ottenuto dal mosto fiore delle uve delle tenute di Espiells, Can Massana e La Cuscona. Affina per una media di 36 mesi in bottiglia sui propri lieviti. Al naso offre note profonde di frutta bianca matura, pesca e mela al forno, con sfumature di brioche e spezie. In bocca è ampio, cremoso e persistente, perfetto per accompagnare tutto il pasto.",
+        alcohol: 12
     },
     {
         id: 's2',
@@ -29,7 +30,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "Corpinnat",
         description: "Lunghissimo affinamento, complesso, note di pasticceria e fiori bianchi.",
-        details: "Gramona Imperial è un classico intramontabile. Ora sotto la denominazione Corpinnat, che garantisce standard qualitativi elevatissimi. Affina per oltre 50 mesi. Un vino di grande eleganza che combina note floreali e fruttate con complessi aromi terziari di pasticceria, noci e tostatura derivanti dal lungo invecchiamento. La bollicina è finissima e vellutata."
+        details: "Gramona Imperial è un classico intramontabile. Ora sotto la denominazione Corpinnat, che garantisce standard qualitativi elevatissimi. Affina per oltre 50 mesi. Un vino di grande eleganza che combina note floreali e fruttate con complessi aromi terziari di pasticceria, noci e tostatura derivanti dal lungo invecchiamento. La bollicina è finissima e vellutata.",
+        alcohol: 12
     },
     {
         id: 's3',
@@ -43,7 +45,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "Corpinnat",
         description: "Secco, minerale, biodinamico, espressione pura del terroir.",
-        details: "Recaredo pratica un'agricoltura biodinamica rigorosa. Questo Brut Nature (senza dosaggio) è un'espressione pura e cristallina del terroir calcareo dell'Alt Penedès. Affinato con tappo di sughero naturale (non a corona) per oltre 30 mesi, viene sboccato a mano a temperatura ambiente. Austero, minerale, con note di finocchio e pietra bagnata."
+        details: "Recaredo pratica un'agricoltura biodinamica rigorosa. Questo Brut Nature (senza dosaggio) è un'espressione pura e cristallina del terroir calcareo dell'Alt Penedès. Affinato con tappo di sughero naturale (non a corona) per oltre 30 mesi, viene sboccato a mano a temperatura ambiente. Austero, minerale, con note di finocchio e pietra bagnata.",
+        alcohol: 12
     },
     {
         id: 's4',
@@ -57,7 +60,8 @@ const wines: WineItem[] = [
         price: 38,
         denomination: "D.O. Cava Reserva",
         description: "Rosato fresco, frutti rossi di bosco, bollicina fine.",
-        details: "Un Cava rosato unico prodotto con l'uva autoctona Trepat. Colore cerasuolo brillante. Al naso esplode con note di frutti di bosco, fragoline e lamponi, con un tocco speziato. In bocca è fresco, vivace e divertente, ma con una struttura che lo rende adatto anche ad accompagnare salumi e piatti di pesce saporiti."
+        details: "Un Cava rosato unico prodotto con l'uva autoctona Trepat. Colore cerasuolo brillante. Al naso esplode con note di frutti di bosco, fragoline e lamponi, con un tocco speziato. In bocca è fresco, vivace e divertente, ma con una struttura che lo rende adatto anche ad accompagnare salumi e piatti di pesce saporiti.",
+        alcohol: 11.5
     },
     {
         id: 's5',
@@ -71,7 +75,8 @@ const wines: WineItem[] = [
         price: 50,
         denomination: "D.O. Txakoli de Álava", // Txakoli non ha una denominazione specifica per lo spumante, ma si usa la D.O. della zona.
         description: "Spumante atlantico, salino, agrumato, unico nel suo genere.",
-        details: "Un progetto innovativo di Artadi nei Paesi Baschi. Izar-Leku è uno spumante atlantico prodotto con l'uva locale Hondarrabi Zuri. Affina 36 mesi sui lieviti. Il risultato è sorprendente: tagliente, salino, con note di agrumi, mela verde e iodio. Una bollicina gastronomica perfetta per ostriche e crostacei."
+        details: "Un progetto innovativo di Artadi nei Paesi Baschi. Izar-Leku è uno spumante atlantico prodotto con l'uva locale Hondarrabi Zuri. Affina 36 mesi sui lieviti. Il risultato è sorprendente: tagliente, salino, con note di agrumi, mela verde e iodio. Una bollicina gastronomica perfetta per ostriche e crostacei.",
+        alcohol: 12.5
     },
     {
         id: 's6',
@@ -85,7 +90,8 @@ const wines: WineItem[] = [
         price: 120,
         denomination: "D.O. Cava Gran Reserva",
         description: "Bottiglia ad anfora, affinamento lunghissimo, cremoso e complesso.",
-        details: "Kripta è un'opera d'arte, sia dentro che fuori. La bottiglia a forma di anfora ricorda le origini romane del vino. Prodotto da vigne vecchissime nel Penedès, affina per almeno 5 anni. È un Cava di straordinaria complessità: note di crema pasticcera, frutta candita, tostatura e tartufo. Setoso e interminabile."
+        details: "Kripta è un'opera d'arte, sia dentro che fuori. La bottiglia a forma di anfora ricorda le origini romane del vino. Prodotto da vigne vecchissime nel Penedès, affina per almeno 5 anni. È un Cava di straordinaria complessità: note di crema pasticcera, frutta candita, tostatura e tartufo. Setoso e interminabile.",
+        alcohol: 12
     },
     {
         id: 's7',
@@ -99,7 +105,8 @@ const wines: WineItem[] = [
         price: 42,
         denomination: "Conca del Riu Anoia (VdT)", // VdT = Vino de la Tierra, denominazione proprietaria al di fuori di Cava.
         description: "Rosato pallido, elegante, minerale con note di agrumi.",
-        details: "Raventós i Blanc ha lasciato la DO Cava per creare la denominazione Conca del Riu Anoia, focalizzata sul terroir. De Nit è un rosato pallidissimo, dove l'uva Monastrell dona solo un tocco di colore e struttura. Profuma di agrumi, fiori bianchi e macchia mediterranea. In bocca è teso, minerale e dissetante."
+        details: "Raventós i Blanc ha lasciato la DO Cava per creare la denominazione Conca del Riu Anoia, focalizzata sul terroir. De Nit è un rosato pallidissimo, dove l'uva Monastrell dona solo un tocco di colore e struttura. Profuma di agrumi, fiori bianchi e macchia mediterranea. In bocca è teso, minerale e dissetante.",
+        alcohol: 12
     },
     {
         id: 's8',
@@ -113,7 +120,8 @@ const wines: WineItem[] = [
         price: 65,
         denomination: "Conca del Riu Anoia (VdT)",
         description: "Blanc de Noirs, strutturato, note di frutta rossa e spezie.",
-        details: "Un Blanc de Noirs unico, prodotto con uve rosse autoctone quasi dimenticate: Xarel·lo Vermell, Sumoll e Bastard Negre. Il nome 'Texturas de Pedra' evoca la mineralità del suolo. È un vino strutturato, vinoso, con note di frutta rossa matura, fichi e spezie. Una bollicina da tutto pasto, capace di sfidare le carni."
+        details: "Un Blanc de Noirs unico, prodotto con uve rosse autoctone quasi dimenticate: Xarel·lo Vermell, Sumoll e Bastard Negre. Il nome 'Texturas de Pedra' evoca la mineralità del suolo. È un vino strutturato, vinoso, con note di frutta rossa matura, fichi e spezie. Una bollicina da tutto pasto, capace di sfidare le carni.",
+        alcohol: 12
     },
     {
         id: 's9',
@@ -127,7 +135,8 @@ const wines: WineItem[] = [
         price: 95,
         denomination: "Corpinnat",
         description: "Austero, profondo, note di frutta secca e mineralità calcarea.",
-        details: "Nato nel 1962 da un'idea di Josep Mata Capellades, è un omaggio al tempo e al terroir. Prodotto solo nelle migliori annate da vecchie vigne di Xarel·lo e Macabeo. Affina per quasi 10 anni sui lieviti. È un vino profondo, austero, che sa di terra, camomilla essiccata, noci e spezie. Un'esperienza meditativa."
+        details: "Nato nel 1962 da un'idea di Josep Mata Capellades, è un omaggio al tempo e al terroir. Prodotto solo nelle migliori annate da vecchie vigne di Xarel·lo e Macabeo. Affina per quasi 10 anni sui lieviti. È un vino profondo, austero, che sa di terra, camomilla essiccata, noci e spezie. Un'esperienza meditativa.",
+        alcohol: 12
     },
     {
         id: 's10',
@@ -141,7 +150,8 @@ const wines: WineItem[] = [
         price: 70,
         denomination: "Corpinnat",
         description: "Cremoso, note di mela cotogna, erbe aromatiche e brioche.",
-        details: "III Lustros è un Brut Nature che affina per oltre 70 mesi (più di tre lustri, da cui il nome, anche se ora l'affinamento è ancora più lungo). Prevalenza di Xarel·lo che dona struttura e longevità. Note intense di mela cotogna, erbe aromatiche, funghi e brioche. Al palato è potente, cremoso ma con una freschezza vibrante."
+        details: "III Lustros è un Brut Nature che affina per oltre 70 mesi (più di tre lustri, da cui il nome, anche se ora l'affinamento è ancora più lungo). Prevalenza di Xarel·lo che dona struttura e longevità. Note intense di mela cotogna, erbe aromatiche, funghi e brioche. Al palato è potente, cremoso ma con una freschezza vibrante.",
+        alcohol: 12.5
     },
 
     // Italy (Franciacorta, Trento, Oltrepò)
@@ -149,7 +159,7 @@ const wines: WineItem[] = [
         id: 'i1',
         name: "Franciacorta Cuvée Prestige",
         producer: "Ca' del Bosco",
-        vintage: "NV",
+        vintage: "",
         region: "Lombardia",
         country: "Italia",
         type: "Bollicine",
@@ -157,7 +167,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "Franciacorta DOCG",
         description: "Classico, equilibrato, note di pesca e mandorla.",
-        details: "Il biglietto da visita di Ca' del Bosco. Cuvée Prestige è l'essenza della Franciacorta in stile Ca' del Bosco. Un assemblaggio delle migliori uve Chardonnay, Pinot Nero e Pinot Bianco provenienti da ben 134 vigne. Affina sui lieviti per 28 mesi. È un vino equilibrato, piacevolmente fresco e acidulo, con note di pesca bianca, mandorla e agrumi."
+        details: "Il biglietto da visita di Ca' del Bosco. Cuvée Prestige è l'essenza della Franciacorta in stile Ca' del Bosco. Un assemblaggio delle migliori uve Chardonnay, Pinot Nero e Pinot Bianco provenienti da ben 134 vigne. Affina sui lieviti per 28 mesi. È un vino equilibrato, piacevolmente fresco e acidulo, con note di pesca bianca, mandorla e agrumi.",
+        alcohol: 12.5
     },
     {
         id: 'i2',
@@ -171,7 +182,8 @@ const wines: WineItem[] = [
         price: 65,
         denomination: "Franciacorta DOCG Satèn",
         description: "Morbido, setoso, perlage finissimo, note di fiori bianchi.",
-        details: "Il Satèn è una tipologia unica della Franciacorta, caratterizzata da una pressione inferiore (meno di 5 atmosfere) che rende la bollicina incredibilmente setosa e cremosa ('Seta'). Questo Bellavista è un Blanc de Blancs (100% Chardonnay) di grande eleganza, con note di fiori bianchi, vaniglia e pasticceria delicata."
+        details: "Il Satèn è una tipologia unica della Franciacorta, caratterizzata da una pressione inferiore (meno di 5 atmosfere) che rende la bollicina incredibilmente setosa e cremosa ('Seta'). Questo Bellavista è un Blanc de Blancs (100% Chardonnay) di grande eleganza, con note di fiori bianchi, vaniglia e pasticceria delicata.",
+        alcohol: 12.5
     },
     {
         id: 'i3',
@@ -185,7 +197,8 @@ const wines: WineItem[] = [
         price: 180,
         denomination: "Trento DOC Riserva",
         description: "Icona assoluta, complesso, lunghissima persistenza, miele e spezie.",
-        details: "Semplicemente una leggenda. Creato solo nelle annate eccezionali, affina per oltre 10 anni sui lieviti. È la massima espressione del Metodo Classico italiano. Un vino caleidoscopico: miele d'acacia, fieno, cioccolato bianco, spezie e frutta candita. In bocca è un monumento di struttura e persistenza."
+        details: "Semplicemente una leggenda. Creato solo nelle annate eccezionali, affina per oltre 10 anni sui lieviti. È la massima espressione del Metodo Classico italiano. Un vino caleidoscopico: miele d'acacia, fieno, cioccolato bianco, spezie e frutta candita. In bocca è un monumento di struttura e persistenza.",
+        alcohol: 12.5
     },
     {
         id: 'i4',
@@ -199,13 +212,14 @@ const wines: WineItem[] = [
         price: 50,
         denomination: "Trento DOC Millesimato",
         description: "Intenso, note di mela renetta e crosta di pane.",
-        details: "Il Perlé è il millesimato storico di casa Ferrari. Ottenuto da una selezione di Chardonnay di montagna, affina per oltre 5 anni sui lieviti. È un vino di grande intensità olfattiva, con le classiche note di mela renetta, mandorla e crosta di pane. In bocca è secco, fresco e di grande pulizia."
+        details: "Il Perlé è il millesimato storico di casa Ferrari. Ottenuto da una selezione di Chardonnay di montagna, affina per oltre 5 anni sui lieviti. È un vino di grande intensità olfattiva, con le classiche note di mela renetta, mandorla e crosta di pane. In bocca è secco, fresco e di grande pulizia.",
+        alcohol: 12.5
     },
     {
         id: 'i5',
         name: "Oltrepò Pavese Pinot Nero",
         producer: "Monsupello",
-        vintage: "NV",
+        vintage: "",
         region: "Lombardia",
         country: "Italia",
         type: "Bollicine",
@@ -213,7 +227,8 @@ const wines: WineItem[] = [
         price: 35,
         denomination: "Oltrepò Pavese DOC Metodo Classico",
         description: "Strutturato, vinoso, note di piccoli frutti rossi.",
-        details: "L'Oltrepò Pavese è la patria italiana del Pinot Nero. Monsupello interpreta questo vitigno difficile con maestria. Questo Brut è strutturato e vinoso, con una spina dorsale acida che lo rende perfetto a tutto pasto. Note di ribes, lampone e una leggera tostatura."
+        details: "L'Oltrepò Pavese è la patria italiana del Pinot Nero. Monsupello interpreta questo vitigno difficile con maestria. Questo Brut è strutturato e vinoso, con una spina dorsale acida che lo rende perfetto a tutto pasto. Note di ribes, lampone e una leggera tostatura.",
+        alcohol: 13
     },
     {
         id: 'i6',
@@ -227,7 +242,8 @@ const wines: WineItem[] = [
         price: 190,
         denomination: "Franciacorta DOCG Riserva",
         description: "Maestoso, complesso, note di frutta esotica e pasticceria.",
-        details: "Dedicato alla fondatrice, è il vino simbolo di Ca' del Bosco. Solo il meglio delle uve selezionate, fermentazione in botte piccola e affinamento di ben 9 anni sui lieviti. Un vino maestoso, che non teme confronti internazionali. Complesso, con note di frutta esotica, agrumi canditi, miele e spezie dolci."
+        details: "Dedicato alla fondatrice, è il vino simbolo di Ca' del Bosco. Solo il meglio delle uve selezionate, fermentazione in botte piccola e affinamento di ben 9 anni sui lieviti. Un vino maestoso, che non teme confronti internazionali. Complesso, con note di frutta esotica, agrumi canditi, miele e spezie dolci.",
+        alcohol: 13
     },
     {
         id: 'i7',
@@ -241,7 +257,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "Trento DOC Riserva",
         description: "Elegante, austero, note di cacao e nocciola.",
-        details: "Il Graal è la punta di diamante di Altemasi. Un Trento DOC Riserva che unisce l'eleganza dello Chardonnay alla struttura del Pinot Nero. Lungo affinamento sui lieviti che dona note evolute di cacao, nocciola e tabacco biondo, mantenendo però una freschezza alpina inconfondibile."
+        details: "Il Graal è la punta di diamante di Altemasi. Un Trento DOC Riserva che unisce l'eleganza dello Chardonnay alla struttura del Pinot Nero. Lungo affinamento sui lieviti che dona note evolute di cacao, nocciola e tabacco biondo, mantenendo però una freschezza alpina inconfondibile.",
+        alcohol: 12.5
     },
     {
         id: 'i8',
@@ -255,7 +272,8 @@ const wines: WineItem[] = [
         price: 48,
         denomination: "Alta Langa DOCG Riserva",
         description: "Fresco, sapido, note di lievito e agrumi.",
-        details: "Contratto è una cantina storica, la prima a produrre spumante metodo classico in Italia nel 1919. Questa Alta Langa Riserva è un Pas Dosé (senza zuccheri aggiunti) che esprime il terroir calcareo piemontese. Verticale, sapido, quasi salato, con note di scorza di limone e lievito fresco."
+        details: "Contratto è una cantina storica, la prima a produrre spumante metodo classico in Italia nel 1919. Questa Alta Langa Riserva è un Pas Dosé (senza zuccheri aggiunti) che esprime il terroir calcareo piemontese. Verticale, sapido, quasi salato, con note di scorza di limone e lievito fresco.",
+        alcohol: 12.5
     },
 
 
@@ -274,7 +292,8 @@ const wines: WineItem[] = [
         price: 35,
         denomination: "D.O. Rías Baixas",
         description: "Fresco, minerale, note di mela verde e fiori.",
-        details: "Il primo Albariño mai imbottigliato (1928). Proviene dalla storica cantina situata all'interno del Palazzo di Fefiñanes a Cambados. Un vino che definisce lo standard della denominazione: fresco, vibrante, con una mineralità granitica e note di mela verde, agrumi e fiori bianchi. Eleganza pura."
+        details: "Il primo Albariño mai imbottigliato (1928). Proviene dalla storica cantina situata all'interno del Palazzo di Fefiñanes a Cambados. Un vino che definisce lo standard della denominazione: fresco, vibrante, con una mineralità granitica e note di mela verde, agrumi e fiori bianchi. Eleganza pura.",
+        alcohol: 12.5
     },
     {
         id: 'w2',
@@ -288,7 +307,8 @@ const wines: WineItem[] = [
         price: 75,
         denomination: "D.O. Rías Baixas",
         description: "Invecchiato, complesso, idrocarburi, frutta matura.",
-        details: "Uno dei più grandi vini bianchi di Spagna. Questo Albariño affina per oltre 30 mesi in acciaio sui lieviti, dimostrando la straordinaria capacità di invecchiamento del vitigno. Complesso, profondo, con note evolute di idrocarburi (simili al Riesling), frutta matura, spezie e una freschezza ancora intatta dopo anni."
+        details: "Uno dei più grandi vini bianchi di Spagna. Questo Albariño affina per oltre 30 mesi in acciaio sui lieviti, dimostrando la straordinaria capacità di invecchiamento del vitigno. Complesso, profondo, con note evolute di idrocarburi (simili al Riesling), frutta matura, spezie e una freschezza ancora intatta dopo anni.",
+        alcohol: 13
     },
     {
         id: 'w3',
@@ -302,7 +322,8 @@ const wines: WineItem[] = [
         price: 80,
         denomination: "D.O.Ca. Rioja Reserva",
         description: "Ossidativo, unico, funghi, miele, frutta secca.",
-        details: "Un vino mitico, unico nel suo genere. Affina per 6 anni in barrique usate, sviluppando uno stile ossidativo controllato che è la firma di Tondonia. Colore oro antico. Al naso offre un bouquet complesso di funghi, cera d'api, miele, mandorle tostate e scorza d'arancia. In bocca è secco, fresco e infinito."
+        details: "Un vino mitico, unico nel suo genere. Affina per 6 anni in barrique usate, sviluppando uno stile ossidativo controllato che è la firma di Tondonia. Colore oro antico. Al naso offre un bouquet complesso di funghi, cera d'api, miele, mandorle tostate e scorza d'arancia. In bocca è secco, fresco e infinito.",
+        alcohol: 12.5
     },
     {
         id: 'w4',
@@ -316,7 +337,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "D.O. Rueda",
         description: "Fermentato in barrique, cremoso, strutturato, tostato.",
-        details: "Il vino che ha rivoluzionato la Rueda. Un Verdejo fermentato e affinato in barrique di rovere francese. Didier Belondrade ha creato un bianco di stile borgognone in Spagna. Cremoso, strutturato, con note di frutta tropicale, tostatura, vaniglia e una vena minerale che dona eleganza."
+        details: "Il vino che ha rivoluzionato la Rueda. Un Verdejo fermentato e affinato in barrique di rovere francese. Didier Belondrade ha creato un bianco di stile borgognone in Spagna. Cremoso, strutturato, con note di frutta tropicale, tostatura, vaniglia e una vena minerale che dona eleganza.",
+        alcohol: 13.5
     },
     {
         id: 'w5',
@@ -330,7 +352,8 @@ const wines: WineItem[] = [
         price: 65,
         denomination: "D.O. Valdeorras",
         description: "Elegante, minerale, pompelmo, fiori di campo.",
-        details: "Rafael Palacios ha portato il Godello ai vertici mondiali. As Sortes proviene da vigne vecchie nella Valle del Bibei. Fermentato in botti grandi, è un vino di grande tensione e mineralità. Note di pompelmo, mela cotogna, fiori di campo e pietra focaia. Un bianco di montagna, fresco e longevo."
+        details: "Rafael Palacios ha portato il Godello ai vertici mondiali. As Sortes proviene da vigne vecchie nella Valle del Bibei. Fermentato in botti grandi, è un vino di grande tensione e mineralità. Note di pompelmo, mela cotogna, fiori di campo e pietra focaia. Un bianco di montagna, fresco e longevo.",
+        alcohol: 13.5
     },
     {
         id: 'w6',
@@ -344,7 +367,8 @@ const wines: WineItem[] = [
         price: 45,
         denomination: "D.O.Ca. Rioja Gran Reserva",
         description: "Complesso, speziato, note di camomilla e rovere.",
-        details: "Un bianco di grande struttura e complessità, proveniente dalla singola vigna Capellanía. Affina per 15 mesi in barrique nuove di rovere francese. È un vino potente, quasi un rosso vestito di bianco. Note di frutta matura, spezie dolci, camomilla, burro e legno tostato. Perfetto con piatti ricchi."
+        details: "Un bianco di grande struttura e complessità, proveniente dalla singola vigna Capellanía. Affina per 15 mesi in barrique nuove di rovere francese. È un vino potente, quasi un rosso vestito di bianco. Note di frutta matura, spezie dolci, camomilla, burro e legno tostato. Perfetto con piatti ricchi.",
+        alcohol: 14
     },
     {
         id: 'w7',
@@ -358,7 +382,8 @@ const wines: WineItem[] = [
         price: 48,
         denomination: "V.T. Castilla y León",
         description: "Vigne pre-fillossera, profondo, minerale, frutta a nocciolo.",
-        details: "Prodotto da vigne di Verdejo pre-fillossera (a piede franco) vecchie di quasi 200 anni. Un vino unico, che fermenta in botte e affina sui lieviti. Profondo, grasso, minerale, con note di frutta a nocciolo, erbe aromatiche e spezie. Un'espressione autentica e ancestrale del Verdejo."
+        details: "Prodotto da vigne di Verdejo pre-fillossera (a piede franco) vecchie di quasi 200 anni. Un vino unico, che fermenta in botte e affina sui lieviti. Profondo, grasso, minerale, con note di frutta a nocciolo, erbe aromatiche e spezie. Un'espressione autentica e ancestrale del Verdejo.",
+        alcohol: 13.5
     },
     {
         id: 'w8',
@@ -372,7 +397,8 @@ const wines: WineItem[] = [
         price: 40,
         denomination: "D.O.Ca. Rioja",
         description: "Biologico, elegante, pera, finocchio, legno ben integrato.",
-        details: "L'unico bianco prodotto da Álvaro Palacios nella Rioja Orientale. Biologico, fermentato in tini di rovere. È un vino di grande finezza ed eleganza. Profuma di pera, mela verde, finocchio e fiori bianchi, con un tocco di legno perfettamente integrato che dona cremosità senza coprire il frutto."
+        details: "L'unico bianco prodotto da Álvaro Palacios nella Rioja Orientale. Biologico, fermentato in tini di rovere. È un vino di grande finezza ed eleganza. Profuma di pera, mela verde, finocchio e fiori bianchi, con un tocco di legno perfettamente integrato che dona cremosità senza coprire il frutto.",
+        alcohol: 13.5
     },
     {
         id: 'w9',
@@ -386,7 +412,8 @@ const wines: WineItem[] = [
         price: 42,
         denomination: "D.O. Rías Baixas",
         description: "Fermentato in legno, ampio, pesca sciroppata, vaniglia.",
-        details: "Un Albariño atipico, fermentato in botti di rovere francese. Questo processo dona al vino una struttura e una complessità notevoli. Al naso le note varietali di pesca e albicocca si fondono con sentori di vaniglia, burro e tostatura. In bocca è ampio, glicerico e persistente."
+        details: "Un Albariño atipico, fermentato in botti di rovere francese. Questo processo dona al vino una struttura e una complessità notevoli. Al naso le note varietali di pesca e albicocca si fondono con sentori di vaniglia, burro e tostatura. In bocca è ampio, glicerico e persistente.",
+        alcohol: 13
     },
     {
         id: 'w10',
@@ -400,7 +427,8 @@ const wines: WineItem[] = [
         price: 90,
         denomination: "D.O. Rías Baixas",
         description: "Affinato sott'acqua, salino, vibrante, agrumato.",
-        details: "Uno dei vini più ricercati di Spagna, creato dal geniale Raúl Pérez. Le bottiglie affinano sott'acqua nella ría di Arousa. Questo conferisce al vino una salinità unica e preserva una freschezza incredibile. Vibrante, elettrico, con note di mare, agrumi e mela verde. Un'esperienza sensoriale."
+        details: "Uno dei vini più ricercati di Spagna, creato dal geniale Raúl Pérez. Le bottiglie affinano sott'acqua nella ría di Arousa. Questo conferisce al vino una salinità unica e preserva una freschezza incredibile. Vibrante, elettrico, con note di mare, agrumi e mela verde. Un'esperienza sensoriale.",
+        alcohol: 13
     },
     {
         id: 'w11',
@@ -414,7 +442,8 @@ const wines: WineItem[] = [
         price: 32,
         denomination: "D.O. Bizkaiko Txakolina",
         description: "Fresco, sapido, erbaceo, mela verde.",
-        details: "Un Txakoli moderno e gastronomico. Prodotto con uve autoctone Hondarrabi Zuri e una piccola percentuale di Riesling. È un vino che riflette il paesaggio basco: verde, fresco e atlantico. Note di mela verde, erba tagliata, agrumi e una spiccata acidità che pulisce il palato."
+        details: "Un Txakoli moderno e gastronomico. Prodotto con uve autoctone Hondarrabi Zuri e una piccola percentuale di Riesling. È un vino che riflette il paesaggio basco: verde, fresco e atlantico. Note di mela verde, erba tagliata, agrumi e una spiccata acidità che pulisce il palato.",
+        alcohol: 12.5
     },
     {
         id: 'w12',
@@ -428,7 +457,8 @@ const wines: WineItem[] = [
         price: 38,
         denomination: "D.O. Terra Alta",
         description: "Mediterraneo, cremoso, fiori bianchi, finocchio.",
-        details: "La Terra Alta è il regno della Garnacha Blanca. Edetaria produce questo bianco da vigne vecchie su suoli di 'panal' (duna fossile). È un vino mediterraneo, solare ma fresco. Cremoso al palato, con note di fiori bianchi, finocchio, pesca e una mineralità gessosa tipica del terroir."
+        details: "La Terra Alta è il regno della Garnacha Blanca. Edetaria produce questo bianco da vigne vecchie su suoli di 'panal' (duna fossile). È un vino mediterraneo, solare ma fresco. Cremoso al palato, con note di fiori bianchi, finocchio, pesca e una mineralità gessosa tipica del terroir.",
+        alcohol: 14
     },
     {
         id: 'w13',
@@ -442,7 +472,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "D.O. Navarra",
         description: "Stile borgognone, burroso, nocciola, pesca.",
-        details: "Uno dei migliori Chardonnay di Spagna. Fermentato e affinato in barrique, ricorda i grandi vini della Borgogna. Complesso, elegante, con note di nocciola tostata, burro, pesca matura e fumo. In bocca è ricco, avvolgente ma sostenuto da un'ottima acidità."
+        details: "Uno dei migliori Chardonnay di Spagna. Fermentato e affinato in barrique, ricorda i grandi vini della Borgogna. Complesso, elegante, con note di nocciola tostata, burro, pesca matura e fumo. In bocca è ricco, avvolgente ma sostenuto da un'ottima acidità.",
+        alcohol: 13.5
     },
     {
         id: 'w14',
@@ -456,7 +487,8 @@ const wines: WineItem[] = [
         price: 30,
         denomination: "D.O. Valdeorras",
         description: "Fresco, floreale, minerale, frutta bianca.",
-        details: "Il progetto galiziano della famosa cantina di Ribera del Duero. Un Godello in purezza che esprime la freschezza della Valdeorras. Profumato, con note di fiori bianchi, mela verde e pesca. In bocca è minerale, sapido e molto beverino. Un bianco versatile e piacevole."
+        details: "Il progetto galiziano della famosa cantina di Ribera del Duero. Un Godello in purezza che esprime la freschezza della Valdeorras. Profumato, con note di fiori bianchi, mela verde e pesca. In bocca è minerale, sapido e molto beverino. Un bianco versatile e piacevole.",
+        alcohol: 13
     },
     {
         id: 'w15',
@@ -470,7 +502,8 @@ const wines: WineItem[] = [
         price: 75,
         denomination: "D.O.Ca. Rioja",
         description: "Complesso, erbe aromatiche, cera d'api, minerale.",
-        details: "Un bianco visionario creato da Telmo Rodríguez. Un assemblaggio di diverse varietà autoctone (Garnacha Blanca, Viura, Roussanne, Marsanne...) coltivate in altitudine. Fermentato in cemento e legno. È un vino di terroir, complesso e originale. Note di erbe aromatiche, cera d'api, fiori secchi e pietra. Lunghissimo."
+        details: "Un bianco visionario creato da Telmo Rodríguez. Un assemblaggio di diverse varietà autoctone (Garnacha Blanca, Viura, Roussanne, Marsanne...) coltivate in altitudine. Fermentato in cemento e legno. È un vino di terroir, complesso e originale. Note di erbe aromatiche, cera d'api, fiori secchi e pietra. Lunghissimo.",
+        alcohol: 13.5
     },
 
     // Italy
@@ -486,7 +519,8 @@ const wines: WineItem[] = [
         price: 70,
         denomination: "Friuli Isonzo DOC",
         description: "Iconico, ricco, miele, fiori di campo, persistente.",
-        details: "Un'icona del vino bianco italiano. Vintage Tunina è un blend di uve internazionali (Sauvignon, Chardonnay) e autoctone (Ribolla Gialla, Malvasia Istriana) raccolte tardivamente. È un vino ricco, grasso e complesso. Profuma di miele, fiori di campo, frutta esotica e zafferano. Lunghissima persistenza."
+        details: "Un'icona del vino bianco italiano. Vintage Tunina è un blend di uve internazionali (Sauvignon, Chardonnay) e autoctone (Ribolla Gialla, Malvasia Istriana) raccolte tardivamente. È un vino ricco, grasso e complesso. Profuma di miele, fiori di campo, frutta esotica e zafferano. Lunghissima persistenza.",
+        alcohol: 13.5
     },
     {
         id: 'w17',
@@ -500,7 +534,8 @@ const wines: WineItem[] = [
         price: 85,
         denomination: "Umbria IGT",
         description: "Strutturato, vaniglia, frutta tropicale, minerale.",
-        details: "Il Cervaro della Sala è stato uno dei primi bianchi italiani a svolgere la fermentazione malolattica e l'affinamento in barrique. Un blend di Chardonnay e Grechetto che sfida il tempo. Note di vaniglia, burro, frutta tropicale e agrumi, sostenute da una mineralità sapida tipica del terroir umbro."
+        details: "Il Cervaro della Sala è stato uno dei primi bianchi italiani a svolgere la fermentazione malolattica e l'affinamento in barrique. Un blend di Chardonnay e Grechetto che sfida il tempo. Note di vaniglia, burro, frutta tropicale e agrumi, sostenute da una mineralità sapida tipica del terroir umbro.",
+        alcohol: 13
     },
     {
         id: 'w18',
@@ -514,7 +549,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "Vermentino di Gallura DOCG",
         description: "Intenso, macchia mediterranea, pietra focaia, mandorla.",
-        details: "Capichera è il riferimento per il Vermentino di Gallura. Un vino che esprime tutta la potenza e i profumi della Sardegna. Intenso, con note di macchia mediterranea, fiori di biancospino, pietra focaia e mandorla. In bocca è caldo, avvolgente, sapido e lunghissimo."
+        details: "Capichera è il riferimento per il Vermentino di Gallura. Un vino che esprime tutta la potenza e i profumi della Sardegna. Intenso, con note di macchia mediterranea, fiori di biancospino, pietra focaia e mandorla. In bocca è caldo, avvolgente, sapido e lunghissimo.",
+        alcohol: 14
     },
     {
         id: 'w19',
@@ -528,7 +564,8 @@ const wines: WineItem[] = [
         price: 35,
         denomination: "Fiano di Avellino DOCG",
         description: "Minerale, affumicato, nocciola, agrumi.",
-        details: "Ciro Picariello è un maestro del Fiano. I suoi vini sono tesi, verticali e minerali, capaci di invecchiare per decenni. Questo Fiano offre note di pietra focaia, agrumi, nocciola tostata e una leggera affumicatura. In bocca è tagliente e salino. Un grande bianco del Sud."
+        details: "Ciro Picariello è un maestro del Fiano. I suoi vini sono tesi, verticali e minerali, capaci di invecchiare per decenni. Questo Fiano offre note di pietra focaia, agrumi, nocciola tostata e una leggera affumicatura. In bocca è tagliente e salino. Un grande bianco del Sud.",
+        alcohol: 13
     },
     {
         id: 'w20',
@@ -542,7 +579,8 @@ const wines: WineItem[] = [
         price: 45,
         denomination: "Soave Classico DOC",
         description: "Avvolgente, frutta esotica, spezie dolci.",
-        details: "La Rocca è un cru storico di Soave, con suolo calcareo-argilloso. Pieropan ne ricava un vino unico, fermentato in legno grande. È un Soave atipico: ricco, avvolgente, con note di frutta esotica matura, spezie dolci e mandorla. Un vino di grande spessore e longevità."
+        details: "La Rocca è un cru storico di Soave, con suolo calcareo-argilloso. Pieropan ne ricava un vino unico, fermentato in legno grande. È un Soave atipico: ricco, avvolgente, con note di frutta esotica matura, spezie dolci e mandorla. Un vino di grande spessore e longevità.",
+        alcohol: 13
     },
     {
         id: 'w21',
@@ -556,7 +594,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "Castelli di Jesi Verdicchio Riserva DOCG",
         description: "Longevo, anice, mandorla, miele, equilibrato.",
-        details: "Eletto più volte miglior bianco d'Italia. Il Villa Bucci Riserva esce solo nelle grandi annate e affina per anni in grandi botti di rovere. È un vino austero, che richiede tempo. Note di anice, mandorla, miele, erbe aromatiche e idrocarburi con l'età. Equilibrio perfetto tra potenza ed eleganza."
+        details: "Eletto più volte miglior bianco d'Italia. Il Villa Bucci Riserva esce solo nelle grandi annate e affina per anni in grandi botti di rovere. È un vino austero, che richiede tempo. Note di anice, mandorla, miele, erbe aromatiche e idrocarburi con l'età. Equilibrio perfetto tra potenza ed eleganza.",
+        alcohol: 13.5
     },
     {
         id: 'w22',
@@ -570,7 +609,8 @@ const wines: WineItem[] = [
         price: 80,
         denomination: "Etna Bianco Superiore DOC",
         description: "Vulcanico, salino, erbe aromatiche, mela cotogna.",
-        details: "Il Pietramarina è il riferimento per l'Etna Bianco Superiore. Prodotto da vigne centenarie di Carricante sul versante est del vulcano. È un vino di montagna, verticale e salino. Profuma di zagara, mela cotogna, anice ed erbe aromatiche. In bocca è vibrante, con una scia sapida interminabile."
+        details: "Il Pietramarina è il riferimento per l'Etna Bianco Superiore. Prodotto da vigne centenarie di Carricante sul versante est del vulcano. È un vino di montagna, verticale e salino. Profuma di zagara, mela cotogna, anice ed erbe aromatiche. In bocca è vibrante, con una scia sapida interminabile.",
+        alcohol: 13
     },
     {
         id: 'w23',
@@ -584,7 +624,8 @@ const wines: WineItem[] = [
         price: 40,
         denomination: "Colli Tortonesi DOC Timorasso",
         description: "Potente, minerale, idrocarburi con l'evoluzione.",
-        details: "Walter Massa è il padre della rinascita del Timorasso. Il Derthona è un bianco potente, strutturato, capace di sfidare i decenni. Giovane è fruttato e floreale, ma con il tempo sviluppa note complesse di idrocarburi, miele e resina, ricordando i grandi Riesling. Un bianco 'rosso' per struttura."
+        details: "Walter Massa è il padre della rinascita del Timorasso. Il Derthona è un bianco potente, strutturato, capace di sfidare i decenni. Giovane è fruttato e floreale, ma con il tempo sviluppa note complesse di idrocarburi, miele e resina, ricordando i grandi Riesling. Un bianco 'rosso' per struttura.",
+        alcohol: 14
     },
     {
         id: 'w24',
@@ -598,7 +639,8 @@ const wines: WineItem[] = [
         price: 42,
         denomination: "Alto Adige DOC",
         description: "Aromatico, litchi, petali di rosa, speziato.",
-        details: "Uno dei migliori Gewürztraminer al mondo. Proviene dal vigneto Nussbaumer a Termeno. È un'esplosione di aromi: petali di rosa, litchi, cannella, chiodi di garofano e frutta tropicale. In bocca è opulento, speziato, ma sostenuto da una sapidità che ne bilancia la ricchezza aromatica."
+        details: "Uno dei migliori Gewürztraminer al mondo. Proviene dal vigneto Nussbaumer a Termeno. È un'esplosione di aromi: petali di rosa, litchi, cannella, chiodi di garofano e frutta tropicale. In bocca è opulento, speziato, ma sostenuto da una sapidità che ne bilancia la ricchezza aromatica.",
+        alcohol: 14.5
     },
     {
         id: 'w25',
@@ -612,7 +654,8 @@ const wines: WineItem[] = [
         price: 150,
         denomination: "Trebbiano d'Abruzzo DOC",
         description: "Mito, naturale, complesso, imprevedibile, unico.",
-        details: "Un vino mitologico, artigianale e senza compromessi. Edoardo Valentini (e ora il figlio Francesco) ha creato un Trebbiano capace di invecchiare per 50 anni. Spesso ridotto o chiuso in gioventù, si apre con il tempo regalando emozioni uniche: caffè, terra bagnata, funghi, agrumi e spezie. Un'esperienza mistica."
+        details: "Un vino mitologico, artigianale e senza compromessi. Edoardo Valentini (e ora il figlio Francesco) ha creato un Trebbiano capace di invecchiare per 50 anni. Spesso ridotto o chiuso in gioventù, si apre con il tempo regalando emozioni uniche: caffè, terra bagnata, funghi, agrumi e spezie. Un'esperienza mistica.",
+        alcohol: 12.5
     },
 
 
@@ -631,7 +674,8 @@ const wines: WineItem[] = [
         price: 90,
         denomination: "D.O.Ca. Rioja Gran Reserva",
         description: "Unico al mondo, buccia di cipolla, evoluto, speziato.",
-        details: "Il rosato più singolare e longevo al mondo. Affina per 4 anni in barrique e molti altri in bottiglia. Colore buccia di cipolla con riflessi aranciati. Al naso è un caleidoscopio: scorza d'arancia essiccata, zafferano, spezie dolci, tabacco biondo e fiori secchi. In bocca è fresco, sapido e interminabile."
+        details: "Il rosato più singolare e longevo al mondo. Affina per 4 anni in barrique e molti altri in bottiglia. Colore buccia di cipolla con riflessi aranciati. Al naso è un caleidoscopio: scorza d'arancia essiccata, zafferano, spezie dolci, tabacco biondo e fiori secchi. In bocca è fresco, sapido e interminabile.",
+        alcohol: 12.5
     },
     {
         id: 'r2',
@@ -645,7 +689,8 @@ const wines: WineItem[] = [
         price: 45,
         denomination: "D.O. Navarra",
         description: "Strutturato, fermentato in legno, gastronomico.",
-        details: "Un rosato di grande struttura, pensato per l'invecchiamento. Fermentato in barrique di rovere francese e affinato sui lieviti. Colore rosa intenso. Profuma di frutti di bosco, vaniglia, spezie e tostatura. In bocca è ampio, vinoso e potente, perfetto per accompagnare carni bianche o pesce grasso."
+        details: "Un rosato di grande struttura, pensato per l'invecchiamento. Fermentato in barrique di rovere francese e affinato sui lieviti. Colore rosa intenso. Profuma di frutti di bosco, vaniglia, spezie e tostatura. In bocca è ampio, vinoso e potente, perfetto per accompagnare carni bianche o pesce grasso.",
+        alcohol: 13.5
     },
     {
         id: 'r3',
@@ -659,7 +704,8 @@ const wines: WineItem[] = [
         price: 40,
         denomination: "D.O. Ribera del Duero",
         description: "Stile antico, fresco, vibrante, frutti rossi.",
-        details: "Jorge Monzón recupera la tradizione del 'Clarete', un vino ottenuto co-fermentando uve rosse e bianche di vecchie vigne. Affinato in botti di rovere per 20 mesi. È un vino vibrante, succoso, con un'acidità tagliente e tannini finissimi. Note di ciliegia, arancia rossa e spezie."
+        details: "Jorge Monzón recupera la tradizione del 'Clarete', un vino ottenuto co-fermentando uve rosse e bianche di vecchie vigne. Affinato in botti di rovere per 20 mesi. È un vino vibrante, succoso, con un'acidità tagliente e tannini finissimi. Note di ciliegia, arancia rossa e spezie.",
+        alcohol: 13
     },
     {
         id: 'r4',
@@ -673,7 +719,8 @@ const wines: WineItem[] = [
         price: 25,
         denomination: "D.O. Ribera del Duero",
         description: "Fresco, floreale, facile beva, elegante.",
-        details: "Un rosato moderno e accessibile creato da Bertrand Sourdais. Un blend di Tinto Fino e Albillo da vigne vecchie. Colore rosa pallido. Al naso è floreale e fruttato, con note di rosa e fragolina di bosco. In bocca è fresco, leggero e dissetante, con un finale pulito."
+        details: "Un rosato moderno e accessibile creato da Bertrand Sourdais. Un blend di Tinto Fino e Albillo da vigne vecchie. Colore rosa pallido. Al naso è floreale e fruttato, con note di rosa e fragolina di bosco. In bocca è fresco, leggero e dissetante, con un finale pulito.",
+        alcohol: 13
     },
     {
         id: 'r5',
@@ -687,7 +734,8 @@ const wines: WineItem[] = [
         price: 35,
         denomination: "D.O.Q. Priorat",
         description: "Minerale, delicato, frutti di bosco, erbe.",
-        details: "Un rosato di alta quota dal Priorat. Prodotto con Garnacha proveniente da vigne su suoli di argilla rossa. Colore rosa tenue. Profumi delicati di frutti di bosco, anice ed erbe aromatiche. In bocca sorprende per la sua freschezza e mineralità, pur mantenendo la struttura tipica del Priorat."
+        details: "Un rosato di alta quota dal Priorat. Prodotto con Garnacha proveniente da vigne su suoli di argilla rossa. Colore rosa tenue. Profumi delicati di frutti di bosco, anice ed erbe aromatiche. In bocca sorprende per la sua freschezza e mineralità, pur mantenendo la struttura tipica del Priorat.",
+        alcohol: 13.5
     },
 
     // Italy
@@ -703,7 +751,8 @@ const wines: WineItem[] = [
         price: 95,
         denomination: "Cerasuolo d'Abruzzo DOC",
         description: "Potente, vinoso, complesso, quasi un rosso.",
-        details: "Il Cerasuolo di Valentini è un vino fuori dagli schemi. Non un semplice rosato, ma un vino di struttura e potenza. Colore cerasuolo intenso. Al naso offre note di ciliegia matura, terra, spezie e fiori appassiti. In bocca è tannico, caldo e lunghissimo. Un vino da invecchiamento."
+        details: "Il Cerasuolo di Valentini è un vino fuori dagli schemi. Non un semplice rosato, ma un vino di struttura e potenza. Colore cerasuolo intenso. Al naso offre note di ciliegia matura, terra, spezie e fiori appassiti. In bocca è tannico, caldo e lunghissimo. Un vino da invecchiamento.",
+        alcohol: 14
     },
     {
         id: 'r7',
@@ -717,7 +766,8 @@ const wines: WineItem[] = [
         price: 32,
         denomination: "Etna DOC Rosato",
         description: "Vulcanico, sapido, piccoli frutti rossi.",
-        details: "Girolamo Russo interpreta l'Etna con eleganza. Questo rosato da Nerello Mascalese è un inno al vulcano. Colore rosa cipria. Profuma di piccoli frutti rossi, cenere e pietra focaia. In bocca è teso, verticale, sapido e vibrante. Un vino di grande bevibilità e carattere."
+        details: "Girolamo Russo interpreta l'Etna con eleganza. Questo rosato da Nerello Mascalese è un inno al vulcano. Colore rosa cipria. Profuma di piccoli frutti rossi, cenere e pietra focaia. In bocca è teso, verticale, sapido e vibrante. Un vino di grande bevibilità e carattere.",
+        alcohol: 13
     },
     {
         id: 'r8',
@@ -731,7 +781,8 @@ const wines: WineItem[] = [
         price: 28,
         denomination: "Salice Salentino DOC Rosato",
         description: "Storico, ciliegia, rosa, fresco e sapido.",
-        details: "Il primo rosato imbottigliato in Italia (1943). L'Anniversario è la versione premium. Un Negroamaro in purezza di grande equilibrio. Note di ciliegia, fragola, rosa e macchia mediterranea. In bocca è fresco, sapido e persistente. Un classico intramontabile della Puglia."
+        details: "Il primo rosato imbottigliato in Italia (1943). L'Anniversario è la versione premium. Un Negroamaro in purezza di grande equilibrio. Note di ciliegia, fragola, rosa e macchia mediterranea. In bocca è fresco, sapido e persistente. Un classico intramontabile della Puglia.",
+        alcohol: 13
     },
     {
         id: 'r9',
@@ -745,7 +796,8 @@ const wines: WineItem[] = [
         price: 30,
         denomination: "Valle d'Aosta DOC",
         description: "Montagna, fragolina di bosco, acidità tagliente.",
-        details: "Un rosato di montagna unico, prodotto con l'uva autoctona Premetta, che ha naturalmente una buccia rosata. Vinificato in bianco. Profuma di fragolina di bosco, rosa canina e erbe alpine. In bocca è affilato, fresco e minerale, con un'acidità che pulisce il palato."
+        details: "Un rosato di montagna unico, prodotto con l'uva autoctona Premetta, che ha naturalmente una buccia rosata. Vinificato in bianco. Profuma di fragolina di bosco, rosa canina e erbe alpine. In bocca è affilato, fresco e minerale, con un'acidità che pulisce il palato.",
+        alcohol: 12.5
     },
     {
         id: 'r10',
@@ -759,7 +811,8 @@ const wines: WineItem[] = [
         price: 25,
         denomination: "Valtènesi DOC Chiaretto",
         description: "Delicato, pesca, fiori di mandorlo.",
-        details: "Il Rosa dei Frati è l'interpretazione del Chiaretto di Ca' dei Frati. Un vino delicato ed elegante. Colore rosa salmone. Profuma di pesca bianca, mela verde, fiori di mandorlo e biancospino. In bocca è fresco, sapido e leggero, perfetto come aperitivo o con piatti estivi."
+        details: "Il Rosa dei Frati è l'interpretazione del Chiaretto di Ca' dei Frati. Un vino delicato ed elegante. Colore rosa salmone. Profuma di pesca bianca, mela verde, fiori di mandorlo e biancospino. In bocca è fresco, sapido e leggero, perfetto come aperitivo o con piatti estivi.",
+        alcohol: 12.5
     },
 
 
@@ -778,7 +831,8 @@ const wines: WineItem[] = [
         price: 350,
         denomination: "D.O. Ribera del Duero Gran Reserva",
         description: "Mito spagnolo, eleganza infinita, complesso, balsamico.",
-        details: "Il mito assoluto del vino spagnolo. Único è prodotto solo nelle migliori annate e affina per almeno 10 anni tra legno e bottiglia prima di uscire sul mercato. Un vino di eleganza aristocratica, complesso, con note di frutta nera, tabacco, cuoio, spezie e menta. Tannini di seta e persistenza infinita."
+        details: "Il mito assoluto del vino spagnolo. Único è prodotto solo nelle migliori annate e affina per almeno 10 anni tra legno e bottiglia prima di uscire sul mercato. Un vino di eleganza aristocratica, complesso, con note di frutta nera, tabacco, cuoio, spezie e menta. Tannini di seta e persistenza infinita.",
+        alcohol: 14
     },
     {
         id: 'red3',
@@ -792,7 +846,8 @@ const wines: WineItem[] = [
         price: 900,
         denomination: "D.O.Q. Priorat Vinya Classificada",
         description: "Garnacha mistica, minerale, profondo, emozionante.",
-        details: "L'Ermita è l'anima del Priorat. Prodotto da una vigna singola di Garnacha pre-fillossera a Gratallops, su ripide pendenze di licorella (ardesia). È un vino mistico, di una profondità e purezza disarmanti. Frutto rosso purissimo, grafite, erbe aromatiche e una tensione minerale vibrante."
+        details: "L'Ermita è l'anima del Priorat. Prodotto da una vigna singola di Garnacha pre-fillossera a Gratallops, su ripide pendenze di licorella (ardesia). È un vino mistico, di una profondità e purezza disarmanti. Frutto rosso purissimo, grafite, erbe aromatiche e una tensione minerale vibrante.",
+        alcohol: 14.5
     },
     {
         id: 'red2',
@@ -820,7 +875,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "D.O.Ca. Rioja Reserva",
         description: "Classico, pelle, tabacco, vaniglia, setoso.",
-        details: "Un Rioja tradizionale e atemporale. Affina per 6 anni in botte e si presenta con un colore rubino scarico. Profumi di cuoio, tabacco, vaniglia, frutta secca. In bocca è setoso e di grande eleganza. Un vero classico per chi ama lo stile tradizionale."
+        details: "Un Rioja tradizionale e atemporale. Affina per 6 anni in botte e si presenta con un colore rubino scarico. Profumi di cuoio, tabacco, vaniglia, frutta secca. In bocca è setoso e di grande eleganza. Un vero classico per chi ama lo stile tradizionale.",
+        alcohol: 13
     },
     {
         id: 'red4',
@@ -834,7 +890,8 @@ const wines: WineItem[] = [
         price: 65,
         denomination: "D.O.Ca. Rioja Gran Reserva",
         description: "Classico Rioja, speziato, tabacco, elegante.",
-        details: "Un classico intramontabile della Rioja. Il Gran Reserva 904 affina per 4 anni in botti di rovere americano. È l'eleganza fatta vino: colore rubino con riflessi mattoni, profumi di cocco, vaniglia, tabacco, cuoio e ciliegia sotto spirito. In bocca è setoso, levigato e armonico."
+        details: "Un classico intramontabile della Rioja. Il Gran Reserva 904 affina per 4 anni in botti di rovere americano. È l'eleganza fatta vino: colore rubino con riflessi mattoni, profumi di cocco, vaniglia, tabacco, cuoio e ciliegia sotto spirito. In bocca è setoso, levigato e armonico.",
+        alcohol: 13.5
     },
     {
         id: 'red6',
@@ -848,7 +905,8 @@ const wines: WineItem[] = [
         price: 85,
         denomination: "D.O.Q. Priorat",
         description: "Pioniere del Priorat, potente, minerale, frutti neri.",
-        details: "Uno dei 'Magnifici 5' che hanno rilanciato il Priorat. René Barbier crea un vino potente e strutturato, che riflette il terroir di licorella. Note intense di mora, prugna, grafite e macchia mediterranea. Tannini presenti ma maturi, grande potenziale di invecchiamento."
+        details: "Uno dei 'Magnifici 5' che hanno rilanciato il Priorat. René Barbier crea un vino potente e strutturato, che riflette il terroir di licorella. Note intense di mora, prugna, grafite e macchia mediterranea. Tannini presenti ma maturi, grande potenziale di invecchiamento.",
+        alcohol: 15
     },
     {
         id: 'red11',
@@ -862,7 +920,8 @@ const wines: WineItem[] = [
         price: 95,
         denomination: "D.O. Ribera del Duero",
         description: "Strutturato, moderno, esplosivo, cioccolato.",
-        details: "PS sta per 'Pagos Seleccionados'. È la selezione delle migliori parcelle di Aalto. Un vino monumentale, moderno ed esplosivo. Colore inchiostro. Naso di frutta nera, cioccolato fondente, spezie esotiche e legno nuovo. In bocca è denso, masticabile, ma con tannini di grana finissima."
+        details: "PS sta per 'Pagos Seleccionados'. È la selezione delle migliori parcelle di Aalto. Un vino monumentale, moderno ed esplosivo. Colore inchiostro. Naso di frutta nera, cioccolato fondente, spezie esotiche e legno nuovo. In bocca è denso, masticabile, ma con tannini di grana finissima.",
+        alcohol: 15
     },
     {
         id: 'red20',
@@ -876,7 +935,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "D.O. Jumilla",
         description: "Marmellata, caffè, potente, alcolico.",
-        details: "Un blockbuster dalla Jumilla. Monastrell da vigne vecchie con un tocco di Cabernet Sauvignon. È un vino denso, quasi masticabile. Note di marmellata di more, caffè espresso, cioccolato e vaniglia. Potente e alcolico, ma con un equilibrio sorprendente. Per chi ama i vini muscolosi."
+        details: "Un blockbuster dalla Jumilla. Monastrell da vigne vecchie con un tocco di Cabernet Sauvignon. È un vino denso, quasi masticabile. Note di marmellata di more, caffè espresso, cioccolato e vaniglia. Potente e alcolico, ma con un equilibrio sorprendente. Per chi ama i vini muscolosi.",
+        alcohol: 15.5
     },
     {
         id: 're8',
@@ -890,7 +950,8 @@ const wines: WineItem[] = [
         price: 65,
         denomination: "D.O. Toro",
         description: "Potente, rustico-elegante, cioccolato, more.",
-        details: "Il progetto di Vega Sicilia a Toro. Pintia è un vino potente e concentrato, ma con l'eleganza tipica della casa. Tinta de Toro in purezza, affinata in barrique. Note di cioccolato, mora, liquirizia e spezie. Tannini fitti ma levigati. Un Toro di razza."
+        details: "Il progetto di Vega Sicilia a Toro. Pintia è un vino potente e concentrato, ma con l'eleganza tipica della casa. Tinta de Toro in purezza, affinata in barrique. Note di cioccolato, mora, liquirizia e spezie. Tannini fitti ma levigati. Un Toro di razza.",
+        alcohol: 15
     },
     {
         id: 'red5',
@@ -904,7 +965,8 @@ const wines: WineItem[] = [
         price: 150,
         denomination: "D.O. Ribera del Duero Reserva",
         description: "Fratello minore di Único, ma con grande personalità.",
-        details: "Valbuena 5° è l'espressione più pura del Tinto Fino di Vega Sicilia, con un affinamento di 5 anni. Più immediato dell'Único ma con la stessa classe. Ricco, concentrato, con note di frutta rossa matura, spezie e legno pregiato. Un vino di grande equilibrio e potenza."
+        details: "Valbuena 5° è l'espressione più pura del Tinto Fino di Vega Sicilia, con un affinamento di 5 anni. Più immediato dell'Único ma con la stessa classe. Ricco, concentrato, con note di frutta rossa matura, spezie e legno pregiato. Un vino di grande equilibrio e potenza.",
+        alcohol: 14.5
     },
     {
         id: 're10',
@@ -918,7 +980,8 @@ const wines: WineItem[] = [
         price: 180,
         denomination: "D.O.Ca. Rioja Gran Reserva",
         description: "Storico, complesso, evoluto, perfetto equilibrio.",
-        details: "Un monumento della Rioja. Il Castillo Ygay è prodotto solo nelle migliori annate e affina per anni in botti di rovere. È un vino di incredibile complessità e longevità. Note di frutta rossa candita, tabacco, cuoio, spezie dolci e terra. Un equilibrio perfetto tra tradizione e finezza."
+        details: "Un monumento della Rioja. Il Castillo Ygay è prodotto solo nelle migliori annate e affina per anni in botti di rovere. È un vino di incredibile complessità e longevità. Note di frutta rossa candita, tabacco, cuoio, spezie dolci e terra. Un equilibrio perfetto tra tradizione e finezza.",
+        alcohol: 14
     },
     {
         id: 'red12',
@@ -932,7 +995,8 @@ const wines: WineItem[] = [
         price: 130,
         denomination: "D.O. Ribera del Duero",
         description: "Vigna singola, elegante, minerale, balsamico.",
-        details: "Il vertice della produzione di Emilio Moro. Proviene dal vigneto Sanchomartín, caratterizzato da suoli calcarei. Questo conferisce al vino un'eleganza e una mineralità superiori. Note di frutta nera, violetta, balsamo e spezie fini. Un Ribera del Duero 'aereo' e raffinato."
+        details: "Il vertice della produzione di Emilio Moro. Proviene dal vigneto Sanchomartín, caratterizzato da suoli calcarei. Questo conferisce al vino un'eleganza e una mineralità superiori. Note di frutta nera, violetta, balsamo e spezie fini. Un Ribera del Duero 'aereo' e raffinato.",
+        alcohol: 14.5
     },
     {
         id: 'red10',
@@ -946,7 +1010,8 @@ const wines: WineItem[] = [
         price: 110,
         denomination: "D.O. Ribera del Duero Gran Reserva",
         description: "Storico, austero, cuoio, prugna.",
-        details: "Alejandro Fernández è stato il padre della moderna Ribera del Duero. Il Janus è il suo capolavoro, prodotto solo nelle annate eccezionali e vinificato in modo tradizionale. Un vino austero, vecchio stile, con note di cuoio, prugna secca, tabacco e terra. Un pezzo di storia."
+        details: "Alejandro Fernández è stato il padre della moderna Ribera del Duero. Il Janus è il suo capolavoro, prodotto solo nelle annate eccezionali e vinificato in modo tradizionale. Un vino austero, vecchio stile, con note di cuoio, prugna secca, tabacco e terra. Un pezzo di storia.",
+        alcohol: 14
     },
     {
         id: 'red19',
@@ -960,7 +1025,8 @@ const wines: WineItem[] = [
         price: 40,
         denomination: "V.T. Castilla y León", // Fuori dalla D.O. Ribera del Duero
         description: "Affidabile, ricco, fruttato, tannini dolci.",
-        details: "Uno dei vini più amati di Spagna. Mauro è una garanzia di qualità. Un Tempranillo ricco, avvolgente, con un frutto esplosivo e tannini dolci e levigati. È il vino che piace a tutti, perfetto per una grigliata o una cena importante. Un classico moderno."
+        details: "Uno dei vini più amati di Spagna. Mauro è una garanzia di qualità. Un Tempranillo ricco, avvolgente, con un frutto esplosivo e tannini dolci e levigati. È il vino che piace a tutti, perfetto per una grigliata o una cena importante. Un classico moderno.",
+        alcohol: 14.5
     },
     {
         id: 're13',
@@ -974,7 +1040,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "D.O. Toro",
         description: "Concentrato, nero, tannini potenti, lungo.",
-        details: "Il vino che ha messo Toro sulla mappa. Numanthia è un'espressione potente e concentrata della Tinta de Toro. Colore nero inchiostro. Note di mora, liquirizia, caffè e spezie. Tannini massicci ma ben integrati. Un vino per chi ama la potenza e la struttura."
+        details: "Il vino che ha messo Toro sulla mappa. Numanthia è un'espressione potente e concentrata della Tinta de Toro. Colore nero inchiostro. Note di mora, liquirizia, caffè e spezie. Tannini massicci ma ben integrati. Un vino per chi ama la potenza e la struttura.",
+        alcohol: 15
     },
     {
         id: 'red8',
@@ -988,7 +1055,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "D.O. Ribera del Duero",
         description: "Moderno, fruttato, legno ben dosato, elegante.",
-        details: "Il progetto di Roda nella Ribera del Duero. Corimbo I proviene da vigne vecchie ad La Horra. È un Ribera moderno, dove il legno è al servizio del frutto e non viceversa. Note di prugna nera, cioccolato, spezie e terra. Tannini vellutati e grande freschezza."
+        details: "Il progetto di Roda nella Ribera del Duero. Corimbo I proviene da vigne vecchie ad La Horra. È un Ribera moderno, dove il legno è al servizio del frutto e non viceversa. Note di prugna nera, cioccolato, spezie e terra. Tannini vellutati e grande freschezza.",
+        alcohol: 14.5
     },
     {
         id: 'red13',
@@ -1002,7 +1070,8 @@ const wines: WineItem[] = [
         price: 80,
         denomination: "D.O.Ca. Rioja",
         description: "Potente, moderno ma con radici classiche.",
-        details: "L'interpretazione moderna della Rioja da parte di una cantina classica. Torre Muga è potente, scuro e concentrato. Fermentato in tini di legno. Note di frutta nera matura, grafite, spezie e tostatura. Un vino che unisce la forza del frutto alla complessità dell'affinamento."
+        details: "L'interpretazione moderna della Rioja da parte di una cantina classica. Torre Muga è potente, scuro e concentrato. Fermentato in tini di legno. Note di frutta nera matura, grafite, spezie e tostatura. Un vino che unisce la forza del frutto alla complessità dell'affinamento.",
+        alcohol: 14.5
     },
     {
         id: 'red16',
@@ -1016,7 +1085,8 @@ const wines: WineItem[] = [
         price: 40,
         denomination: "D.O.Q. Priorat",
         description: "Accessibile, minerale, macchia mediterranea.",
-        details: "Il biglietto da visita di Álvaro Palacios nel Priorat. Les Terrasses è prodotto con uve acquistate da viticoltori storici della regione. È un vino che democratizza il Priorat: minerale, fresco, con note di frutta rossa, grafite e erbe aromatiche. Un vino di terroir accessibile."
+        details: "Il biglietto da visita di Álvaro Palacios nel Priorat. Les Terrasses è prodotto con uve acquistate da viticoltori storici della regione. È un vino che democratizza il Priorat: minerale, fresco, con note di frutta rossa, grafite e erbe aromatiche. Un vino di terroir accessibile.",
+        alcohol: 14.5
     },
     {
         id: 'red15',
@@ -1030,7 +1100,8 @@ const wines: WineItem[] = [
         price: 90,
         denomination: "D.O. Bierzo Vina Classificada",
         description: "Etereo, floreale, minerale, finezza borgognona.",
-        details: "Il Bierzo è la nuova frontiera dell'eleganza spagnola. Ricardo Pérez e Álvaro Palacios producono questo Mencía da vigne ripide su scisto. Las Lamas è etereo, quasi impalpabile ma persistente. Note di violetta, arancia rossa, spezie e pietra. Un vino che ricorda i grandi Pinot Noir."
+        details: "Il Bierzo è la nuova frontiera dell'eleganza spagnola. Ricardo Pérez e Álvaro Palacios producono questo Mencía da vigne ripide su scisto. Las Lamas è etereo, quasi impalpabile ma persistente. Note di violetta, arancia rossa, spezie e pietra. Un vino che ricorda i grandi Pinot Noir.",
+        alcohol: 13.5
     },
     {
         id: 'red7',
@@ -1044,7 +1115,8 @@ const wines: WineItem[] = [
         price: 300,
         denomination: "V.T. Álava", // Artadi ha lasciato la D.O.Ca Rioja
         description: "Vigna singola, pura energia, frutta rossa, floreale.",
-        details: "Un vino di vigna singola che è pura magia. Artadi ha lasciato la DOC Rioja per seguire la propria strada. El Pisón è un Tempranillo di una finezza inaudita. Energia pura, vibrazione, con note di frutta rossa croccante, fiori e mineralità calcarea. Un vino che tocca l'anima."
+        details: "Un vino di vigna singola che è pura magia. Artadi ha lasciato la DOC Rioja per seguire la propria strada. El Pisón è un Tempranillo di una finezza inaudita. Energia pura, vibrazione, con note di frutta rossa croccante, fiori e mineralità calcarea. Un vino che tocca l'anima.",
+        alcohol: 14
     },
     {
         id: 'red18',
@@ -1058,7 +1130,8 @@ const wines: WineItem[] = [
         price: 45,
         denomination: "D.O. Toro",
         description: "Mauro in Toro, potente, minerale, scuro.",
-        details: "La famiglia García (Mauro) a Toro. San Román è un vino potente, solare e strutturato, ma con una gestione dei tannini magistrale. Note di frutta nera matura, liquirizia, inchiostro e terra. Un vino che esprime la forza del clima continentale estremo di Toro."
+        details: "La famiglia García (Mauro) a Toro. San Román è un vino potente, solare e strutturato, ma con una gestione dei tannini magistrale. Note di frutta nera matura, liquirizia, inchiostro e terra. Un vino che esprime la forza del clima continentale estremo di Toro.",
+        alcohol: 14.5
     },
     {
         id: 'red9',
@@ -1072,7 +1145,8 @@ const wines: WineItem[] = [
         price: 70,
         denomination: "V.T. Castilla y León",
         description: "Potente, concentrato, tannini maturi.",
-        details: "Mariano García, ex enologo di Vega Sicilia, produce questo vino potente e concentrato. VS sta per 'Vendimia Seleccionada'. È un Tempranillo muscolare, ricco di estratto, con note di frutta nera in confettura, liquirizia e tostatura. Un vino che riempie la bocca."
+        details: "Mariano García, ex enologo di Vega Sicilia, produce questo vino potente e concentrato. VS sta per 'Vendimia Seleccionada'. È un Tempranillo muscolare, ricco di estratto, con note di frutta nera in confettura, liquirizia e tostatura. Un vino che riempie la bocca.",
+        alcohol: 14.5
     },
     {
         id: 'red14',
@@ -1086,7 +1160,8 @@ const wines: WineItem[] = [
         price: 75,
         denomination: "D.O. El Terrerazo", // D.O. di Pago, massimo livello qualitativo
         description: "Miglior Bobal al mondo, mediterraneo, erbe, frutti rossi.",
-        details: "Toni Sarrión ha dimostrato che l'uva Bobal può produrre grandi vini. Quincha Corral è il suo capolavoro, da vigne vecchissime. Un vino mediterraneo di classe mondiale. Profuma di macchia mediterranea, rosmarino, frutti rossi e grafite. In bocca è setoso, fresco e profondo."
+        details: "Toni Sarrión ha dimostrato che l'uva Bobal può produrre grandi vini. Quincha Corral è il suo capolavoro, da vigne vecchissime. Un vino mediterraneo di classe mondiale. Profuma di macchia mediterranea, rosmarino, frutti rossi e grafite. In bocca è setoso, fresco e profondo.",
+        alcohol: 14
     },
     {
         id: 'red21',
@@ -1100,7 +1175,8 @@ const wines: WineItem[] = [
         price: 20,
         denomination: "D.O. Jumilla",
         description: "Popolare, frutta matura, rovere tostato.",
-        details: "Il vino che ha fatto conoscere la Jumilla al mondo. Un Monastrell in purezza affinato in legno. Rapporto qualità-prezzo imbattibile. Note di frutta rossa matura, spezie dolci e rovere tostato (vaniglia, cocco). Morbido, caldo e piacevole. Un crowd-pleaser."
+        details: "Il vino che ha fatto conoscere la Jumilla al mondo. Un Monastrell in purezza affinato in legno. Rapporto qualità-prezzo imbattibile. Note di frutta rossa matura, spezie dolci e rovere tostato (vaniglia, cocco). Morbido, caldo e piacevole. Un crowd-pleaser.",
+        alcohol: 15
     },
     {
         id: 'red22',
@@ -1114,7 +1190,8 @@ const wines: WineItem[] = [
         price: 28,
         denomination: "D.O.Q. Priorat",
         description: "Intro al Priorat, fresco, fruttato.",
-        details: "La porta d'ingresso al mondo di Álvaro Palacios nel Priorat. Un blend di uve locali e internazionali. È un vino fresco, fruttato e floreale, che offre un assaggio della mineralità della regione senza essere troppo impegnativo. Perfetto per chi si avvicina al Priorat."
+        details: "La porta d'ingresso al mondo di Álvaro Palacios nel Priorat. Un blend di uve locali e internazionali. È un vino fresco, fruttato e floreale, che offre un assaggio della mineralità della regione senza essere troppo impegnativo. Perfetto per chi si avvicina al Priorat.",
+        alcohol: 14.5
     },
     {
         id: 'red23',
@@ -1128,7 +1205,8 @@ const wines: WineItem[] = [
         price: 22,
         denomination: "D.O.Ca. Rioja",
         description: "Succoso, spezie, arancia rossa, agile.",
-        details: "La Rioja orientale secondo Álvaro Palacios. Una Garnacha in purezza (o quasi) che è un inno alla gioia. Succoso, vibrante, con note di arancia rossa, ciliegia e spezie. Tannini leggeri e grande bevibilità. Un Rioja moderno e gastronomico."
+        details: "La Rioja orientale secondo Álvaro Palacios. Una Garnacha in purezza (o quasi) che è un inno alla gioia. Succoso, vibrante, con note di arancia rossa, ciliegia e spezie. Tannini leggeri e grande bevibilità. Un Rioja moderno e gastronomico.",
+        alcohol: 14
     },
     {
         id: 're25',
@@ -1142,7 +1220,8 @@ const wines: WineItem[] = [
         price: 48,
         denomination: "D.O.Ca. Rioja",
         description: "Macerazione carbonica parziale, frutto intenso, caffè.",
-        details: "Un Tempranillo moderno e fruttato dalla Rioja Alavesa. La macerazione carbonica parziale esalta il frutto. Note intense di frutti neri, caffè e spezie dolci. Morbido, rotondo e con tannini vellutati. Un Rioja che punta sulla piacevolezza immediata."
+        details: "Un Tempranillo moderno e fruttato dalla Rioja Alavesa. La macerazione carbonica parziale esalta il frutto. Note intense di frutti neri, caffè e spezie dolci. Morbido, rotondo e con tannini vellutati. Un Rioja che punta sulla piacevolezza immediata.",
+        alcohol: 14.5
     },
 
     {
@@ -1157,7 +1236,8 @@ const wines: WineItem[] = [
         price: 25,
         denomination: "D.O. Bierzo",
         description: "Fresco, floreale, pepe, beva compulsiva.",
-        details: "Forse il miglior rapporto qualità-prezzo di Spagna. Raúl Pérez vinifica questo Mencía con il raspo, in tini di legno. È un vino gioioso, fresco, floreale (violetta) e speziato (pepe nero). Ha una beva compulsiva e una leggerezza che conquista. Il Bierzo quotidiano."
+        details: "Forse il miglior rapporto qualità-prezzo di Spagna. Raúl Pérez vinifica questo Mencía con il raspo, in tini di legno. È un vino gioioso, fresco, floreale (violetta) e speziato (pepe nero). Ha una beva compulsiva e una leggerezza che conquista. Il Bierzo quotidiano.",
+        alcohol: 13.5
     },
 
     // Italy
@@ -1173,7 +1253,8 @@ const wines: WineItem[] = [
         price: 1200,
         denomination: "Barolo DOCG Riserva",
         description: "Leggenda, potenza, longevità eterna, complesso.",
-        details: "Il Re dei Barolo. Monfortino è una leggenda vivente. Prodotto solo nelle annate straordinarie, affina per 7 anni in botte grande. È un vino di potenza e struttura inarrivabili, ma con un'eleganza austera. Note di rosa appassita, catrame, tartufo, liquirizia e spezie. Eterno."
+        details: "Il Re dei Barolo. Monfortino è una leggenda vivente. Prodotto solo nelle annate straordinarie, affina per 7 anni in botte grande. È un vino di potenza e struttura inarrivabili, ma con un'eleganza austera. Note di rosa appassita, catrame, tartufo, liquirizia e spezie. Eterno.",
+        alcohol: 14.5
     },
     {
         id: 'red26',
@@ -1187,7 +1268,8 @@ const wines: WineItem[] = [
         price: 300,
         denomination: "Bolgheri Sassicaia DOC",
         description: "Il primo Supertuscan, eleganza bordolese, macchia mediterranea.",
-        details: "Il vino che ha cambiato l'immagine dell'Italia nel mondo. Un taglio bordolese nato a Bolgheri. Sassicaia è sinonimo di eleganza e nobiltà. Non cerca la potenza a tutti i costi, ma l'equilibrio. Note di cassis, cedro, macchia mediterranea e balsamo. Tannini di velluto."
+        details: "Il vino che ha cambiato l'immagine dell'Italia nel mondo. Un taglio bordolese nato a Bolgheri. Sassicaia è sinonimo di eleganza e nobiltà. Non cerca la potenza a tutti i costi, ma l'equilibrio. Note di cassis, cedro, macchia mediterranea e balsamo. Tannini di velluto.",
+        alcohol: 13.5
     },
     {
         id: 'red27',
@@ -1201,7 +1283,8 @@ const wines: WineItem[] = [
         price: 140,
         denomination: "Toscana IGT",
         description: "Pietra miliare, ciliegia, spezie, moderno.",
-        details: "Una pietra miliare dell'enologia italiana. Il primo Sangiovese ad essere affinato in barrique e assemblato con varietà internazionali. Tignanello è un vino moderno ma profondamente toscano. Ciliegia marasca, vaniglia, tabacco e spezie. Un vino iconico e sempre affidabile."
+        details: "Una pietra miliare dell'enologia italiana. Il primo Sangiovese ad essere affinato in barrique e assemblato con varietà internazionali. Tignanello è un vino moderno ma profondamente toscano. Ciliegia marasca, vaniglia, tabacco e spezie. Un vino iconico e sempre affidabile.",
+        alcohol: 14
     },
     {
         id: 'red28',
@@ -1215,7 +1298,8 @@ const wines: WineItem[] = [
         price: 180,
         denomination: "Brunello di Montalcino DOCG",
         description: "Il padre del Brunello, austero, acido, longevo.",
-        details: "Qui è nato il Brunello. Biondi-Santi rappresenta la tradizione più pura. Un vino austero, verticale, con un'acidità vibrante che gli garantisce una longevità straordinaria. Note di arancia rossa, terra, cuoio e fiori secchi. Non è un vino da 'tutto e subito', ma da meditazione."
+        details: "Qui è nato il Brunello. Biondi-Santi rappresenta la tradizione più pura. Un vino austero, verticale, con un'acidità vibrante che gli garantisce una longevità straordinaria. Note di arancia rossa, terra, cuoio e fiori secchi. Non è un vino da 'tutto e subito', ma da meditazione.",
+        alcohol: 13.5
     },
     {
         id: 'red29',
@@ -1229,7 +1313,8 @@ const wines: WineItem[] = [
         price: 350,
         denomination: "Amarone della Valpolicella DOCG Classico",
         description: "Opera d'arte, infinito, ciliegia sotto spirito, cacao.",
-        details: "Giuseppe Quintarelli è stato il Maestro dell'Amarone. I suoi vini sono opere d'arte, scritte a mano. Un Amarone tradizionale, affinato per anni in grandi botti. Infinito, complesso, con note di ciliegia sotto spirito, cacao, tabacco e spezie orientali. Un vino che emoziona."
+        details: "Giuseppe Quintarelli è stato il Maestro dell'Amarone. I suoi vini sono opere d'arte, scritte a mano. Un Amarone tradizionale, affinato per anni in grandi botti. Infinito, complesso, con note di ciliegia sotto spirito, cacao, tabacco e spezie orientali. Un vino che emoziona.",
+        alcohol: 16.5
     },
     {
         id: 'red30',
@@ -1243,7 +1328,8 @@ const wines: WineItem[] = [
         price: 250,
         denomination: "Barbaresco DOCG", // Gaja ha declassato i suoi cru a Langhe DOC
         description: "Potente, concentrato, erbe aromatiche, minerale.",
-        details: "Angelo Gaja ha rivoluzionato il Piemonte. Sorì San Lorenzo è il suo cru più potente e austero. Un Barbaresco concentrato, scuro, con note di erbe aromatiche, liquirizia, catrame e frutta nera. Struttura tannica imponente e grande potenziale di invecchiamento."
+        details: "Angelo Gaja ha rivoluzionato il Piemonte. Sorì San Lorenzo è il suo cru più potente e austero. Un Barbaresco concentrato, scuro, con note di erbe aromatiche, liquirizia, catrame e frutta nera. Struttura tannica imponente e grande potenziale di invecchiamento.",
+        alcohol: 14.5
     },
     {
         id: 're32',
@@ -1257,7 +1343,8 @@ const wines: WineItem[] = [
         price: 800,
         denomination: "Toscana IGT",
         description: "Il Merlot italiano, opulento, argilla, ferro.",
-        details: "Il Merlot italiano per eccellenza. Masseto è un vino di lusso, prodotto in quantità limitate. Opulento, denso, con note di mora, cioccolato, tartufo e terra. Tannini setosi e una persistenza incredibile. Un vino che esprime la ricchezza del terroir di Bolgheri."
+        details: "Il Merlot italiano per eccellenza. Masseto è un vino di lusso, prodotto in quantità limitate. Opulento, denso, con note di mora, cioccolato, tartufo e terra. Tannini setosi e una persistenza incredibile. Un vino che esprime la ricchezza del terroir di Bolgheri.",
+        alcohol: 14.5
     },
     {
         id: 'red31',
@@ -1271,7 +1358,8 @@ const wines: WineItem[] = [
         price: 160,
         denomination: "Toscana IGT",
         description: "Sangiovese puro, elegante, fine, etereo.",
-        details: "Il primo Sangiovese in purezza del Chianti Classico (quando era vietato). Le Pergole Torte è un vino di culto, famoso anche per le etichette artistiche. È l'eleganza fatta Sangiovese: fine, etereo, con note di amarena, viola e spezie. Un vino che sussurra invece di urlare."
+        details: "Il primo Sangiovese in purezza del Chianti Classico (quando era vietato). Le Pergole Torte è un vino di culto, famoso anche per le etichette artistiche. È l'eleganza fatta Sangiovese: fine, etereo, con note di amarena, viola e spezie. Un vino che sussurra invece di urlare.",
+        alcohol: 13.5
     },
     {
         id: 'red34',
@@ -1285,7 +1373,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "Etna DOC Rosso Contrada",
         description: "Vulcanico, elegante, frutti rossi, cenere.",
-        details: "Un cru dell'Etna di straordinaria eleganza. San Lorenzo si trova a 750m di altitudine. Il Nerello Mascalese qui si esprime con note di piccoli frutti rossi, cenere vulcanica, fiori secchi e spezie. In bocca è teso, fine, con tannini setosi e una lunga scia sapida."
+        details: "Un cru dell'Etna di straordinaria eleganza. San Lorenzo si trova a 750m di altitudine. Il Nerello Mascalese qui si esprime con note di piccoli frutti rossi, cenere vulcanica, fiori secchi e spezie. In bocca è teso, fine, con tannini setosi e una lunga scia sapida.",
+        alcohol: 13.5
     },
     {
         id: 're35',
@@ -1299,7 +1388,8 @@ const wines: WineItem[] = [
         price: 50,
         denomination: "Taurasi DOCG Riserva",
         description: "Il Barolo del Sud, austero, prugna, tabacco.",
-        details: "Mastroberardino è la storia dell'Irpinia. Il Radici Riserva è l'archetipo del Taurasi. Un vino austero, profondo, che richiede tempo. Note di prugna, tabacco, cuoio, pepe nero e terra. Tannini fitti e acidità vibrante. Un classico intramontabile."
+        details: "Mastroberardino è la storia dell'Irpinia. Il Radici Riserva è l'archetipo del Taurasi. Un vino austero, profondo, che richiede tempo. Note di prugna, tabacco, cuoio, pepe nero e terra. Tannini fitti e acidità vibrante. Un classico intramontabile.",
+        alcohol: 14
     },
     {
         id: 're36',
@@ -1313,7 +1403,8 @@ const wines: WineItem[] = [
         price: 300,
         denomination: "Montepulciano d'Abruzzo DOC",
         description: "Selvaggio, ridotto poi esplosivo, caffè, terra.",
-        details: "Il Montepulciano d'Abruzzo di Valentini è un vino leggendario. Spesso 'ridotto' in gioventù, si apre con l'età in un'esplosione di profumi. Note di caffè, terra bagnata, liquirizia, frutta nera e spezie. Un vino selvaggio, profondo e di incredibile longevità."
+        details: "Il Montepulciano d'Abruzzo di Valentini è un vino leggendario. Spesso 'ridotto' in gioventù, si apre con l'età in un'esplosione di profumi. Note di caffè, terra bagnata, liquirizia, frutta nera e spezie. Un vino selvaggio, profondo e di incredibile longevità.",
+        alcohol: 14.5
     },
     {
         id: 'red32',
@@ -1327,7 +1418,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "Colli di Salerno IGT",
         description: "Il Sassicaia del Sud, more, spezie, vellutato.",
-        details: "Definito 'il Sassicaia del Sud'. Silvia Imparato ha creato un taglio bordolese con un tocco di Aglianico che ha fatto storia. Un vino morbido, avvolgente, con note di more, spezie dolci, cioccolato e balsamo. Tannini vellutati e grande piacevolezza."
+        details: "Definito 'il Sassicaia del Sud'. Silvia Imparato ha creato un taglio bordolese con un tocco di Aglianico che ha fatto storia. Un vino morbido, avvolgente, con note di more, spezie dolci, cioccolato e balsamo. Tannini vellutati e grande piacevolezza.",
+        alcohol: 14
     },
     {
         id: 're37',
@@ -1341,7 +1433,8 @@ const wines: WineItem[] = [
         price: 320,
         denomination: "Toscana IGT",
         description: "Soleggiato, ricco, cioccolato, menta.",
-        details: "Nato come 'secondo vino' del Tignanello, Solaia è diventato un'icona a sé stante. Predominanza di Cabernet Sauvignon. Un vino solare, ricco, con note di cioccolato, menta, cassis e spezie. Potente ma elegante, con un finale lunghissimo."
+        details: "Nato come 'secondo vino' del Tignanello, Solaia è diventato un'icona a sé stante. Predominanza di Cabernet Sauvignon. Un vino solare, ricco, con note di cioccolato, menta, cassis e spezie. Potente ma elegante, con un finale lunghissimo.",
+        alcohol: 14.5
     },
     {
         id: 'red33',
@@ -1355,7 +1448,8 @@ const wines: WineItem[] = [
         price: 70,
         denomination: "Isola dei Nuraghi IGT",
         description: "Simbolo della Sardegna, mirto, macchia mediterranea, caldo.",
-        details: "Il vino simbolo della Sardegna moderna, creato da Giacomo Tachis. Un blend di vitigni autoctoni. Potente, caldo, mediterraneo. Profuma di mirto, ginepro, prugna e spezie. In bocca è avvolgente, solare e strutturato. Un grande rosso da invecchiamento."
+        details: "Il vino simbolo della Sardegna moderna, creato da Giacomo Tachis. Un blend di vitigni autoctoni. Potente, caldo, mediterraneo. Profuma di mirto, ginepro, prugna e spezie. In bocca è avvolgente, solare e strutturato. Un grande rosso da invecchiamento.",
+        alcohol: 14.5
     },
     {
         id: 're39',
@@ -1369,7 +1463,8 @@ const wines: WineItem[] = [
         price: 90,
         denomination: "Vigneti delle Dolomiti IGT",
         description: "Aristocratico, peperone, eleganza nordica.",
-        details: "Un 'Bordeaux' alpino. San Leonardo è un blend di Cabernet Sauvignon, Carmenère e Merlot. Un vino aristocratico, con note di peperone verde, grafite, tabacco e frutti di bosco. Eleganza nordica, freschezza e grande potenziale di invecchiamento."
+        details: "Un 'Bordeaux' alpino. San Leonardo è un blend di Cabernet Sauvignon, Carmenère e Merlot. Un vino aristocratico, con note di peperone verde, grafite, tabacco e frutti di bosco. Eleganza nordica, freschezza e grande potenziale di invecchiamento.",
+        alcohol: 13
     },
     {
         id: 're40',
@@ -1383,7 +1478,8 @@ const wines: WineItem[] = [
         price: 55,
         denomination: "Chianti Classico DOCG Gran Selezione",
         description: "Vigneto Bellavista, ciliegia scura, minerale.",
-        details: "La Gran Selezione Bellavista di Castello di Ama è un Sangiovese di grande finezza. Proviene da un singolo vigneto. Note di ciliegia scura, viola, terra e una spiccata mineralità. Tannini eleganti e un'acidità vibrante. Un Chianti Classico di altissimo livello."
+        details: "La Gran Selezione Bellavista di Castello di Ama è un Sangiovese di grande finezza. Proviene da un singolo vigneto. Note di ciliegia scura, viola, terra e una spiccata mineralità. Tannini eleganti e un'acidità vibrante. Un Chianti Classico di altissimo livello.",
+        alcohol: 13.5
     },
 
 
@@ -1394,14 +1490,15 @@ const wines: WineItem[] = [
         id: 'p1',
         name: "Pedro Ximénez Duquesa",
         producer: "Sánchez Romate",
-        vintage: "NV",
+        vintage: "",
         region: "Jerez",
         country: "Spagna",
         type: "Passiti/Distillati",
         grape: "Pedro Ximénez",
         price: 30,
         denomination: "D.O. Jerez-Xérès-Sherry PX",
-        description: "Denso, fichi secchi, datteri, cioccolato."
+        description: "Denso, fichi secchi, datteri, cioccolato.",
+        alcohol: 17
     },
     {
         id: 'p2',
@@ -1415,7 +1512,8 @@ const wines: WineItem[] = [
         price: 250,
         denomination: "D.O. Montilla-Moriles PX Gran Reserva",
         description: "Nettare nero, denso, fichi, caffè, infinito.",
-        details: "Un vino che è storia liquida. 100 punti Parker. Un Pedro Ximénez del 1946, denso come olio motore, nero come la pece. Un concentrato di fichi secchi, caffè, cioccolato, liquirizia e spezie. Un'esperienza sensoriale unica, da sorseggiare goccia a goccia. Eterno."
+        details: "Un vino che è storia liquida. 100 punti Parker. Un Pedro Ximénez del 1946, denso come olio motore, nero come la pece. Un concentrato di fichi secchi, caffè, cioccolato, liquirizia e spezie. Un'esperienza sensoriale unica, da sorseggiare goccia a goccia. Eterno.",
+        alcohol: 17
     },
     {
         id: 'p3',
@@ -1429,7 +1527,8 @@ const wines: WineItem[] = [
         price: 80,
         denomination: "D.O. Jerez-Xérès-Sherry Palo Cortado VORS",
         description: "Secco, nocciola, complesso, misterioso.",
-        details: "Il Palo Cortado è il vino più misterioso di Jerez, che combina la finezza dell'Amontillado con la struttura dell'Oloroso. Questo VORS (Very Old Rare Sherry) ha oltre 30 anni di invecchiamento. Secco, tagliente, con note di nocciola tostata, scorza d'arancia e legno antico. Un vino da meditazione."
+        details: "Il Palo Cortado è il vino più misterioso di Jerez, che combina la finezza dell'Amontillado con la struttura dell'Oloroso. Questo VORS (Very Old Rare Sherry) ha oltre 30 anni di invecchiamento. Secco, tagliente, con note di nocciola tostata, scorza d'arancia e legno antico. Un vino da meditazione.",
+        alcohol: 21
     },
     {
         id: 'p4',
@@ -1443,33 +1542,36 @@ const wines: WineItem[] = [
         price: 150,
         denomination: "D.O. Alicante Fondillón",
         description: "Tesoro di Alicante, ossidativo, datteri, legno vecchio.",
-        details: "Il Fondillón è un vino mitico di Alicante, amato da Luigi XIV. Un Monastrell dolce naturale (non fortificato) invecchiato per decenni in botti centenarie. Note di datteri, fichi, carruba, caffè e spezie. Un gusto antico e affascinante, purtroppo quasi scomparso."
+        details: "Il Fondillón è un vino mitico di Alicante, amato da Luigi XIV. Un Monastrell dolce naturale (non fortificato) invecchiato per decenni in botti centenarie. Note di datteri, fichi, carruba, caffè e spezie. Un gusto antico e affascinante, purtroppo quasi scomparso.",
+        alcohol: 16
     },
     {
         id: 'p5',
         name: "Brandy de Jerez Solera Gran Reserva",
         producer: "Cardenal Mendoza",
-        vintage: "NV",
+        vintage: "",
         region: "Jerez",
         country: "Spagna",
         type: "Passiti/Distillati",
         grape: "Distillato",
         price: 45,
         denomination: "Brandy de Jerez D.O.",
-        description: "Morbido, prugna, caramello, rovere."
+        description: "Morbido, prugna, caramello, rovere.",
+        alcohol: 40
     },
     {
         id: 'p6',
         name: "Orujo de Galicia",
         producer: "Pazo de Señorans",
-        vintage: "NV",
+        vintage: "",
         region: "Galicia",
         country: "Spagna",
         type: "Passiti/Distillati",
         grape: "Vinacce Albariño",
         price: 35,
         denomination: "Orujo de Galicia I.G.",
-        description: "Grappa galiziana, erbe, fiori, cristallina."
+        description: "Grappa galiziana, erbe, fiori, cristallina.",
+        alcohol: 42
     },
 
     // Italy
@@ -1485,7 +1587,8 @@ const wines: WineItem[] = [
         price: 60,
         denomination: "Passito di Pantelleria DOC",
         description: "Albicocca, miele, macchia mediterranea, fresco.",
-        details: "Il Passito di Pantelleria più famoso. Prodotto da uve Zibibbo (Moscato d'Alessandria) appassite al sole. Note di albicocca, scorza d'arancia, miele, datteri e macchia mediterranea. Dolce ma con una freschezza vibrante che lo rende mai stucchevole. Un sorso di Sicilia."
+        details: "Il Passito di Pantelleria più famoso. Prodotto da uve Zibibbo (Moscato d'Alessandria) appassite al sole. Note di albicocca, scorza d'arancia, miele, datteri e macchia mediterranea. Dolce ma con una freschezza vibrante che lo rende mai stucchevole. Un sorso di Sicilia.",
+        alcohol: 14.5
     },
     {
         id: 'p8',
@@ -1499,20 +1602,22 @@ const wines: WineItem[] = [
         price: 250,
         denomination: "Vin Santo di Montepulciano DOC",
         description: "Denso, caramello, caffè, acidità incredibile.",
-        details: "Un Vin Santo tradizionale, invecchiato per anni in caratelli. Un nettare ambrato, denso e complesso. Note di caramello, caffè, nocciola tostata, fichi secchi e spezie. L'acidità bilancia perfettamente la dolcezza, rendendolo elegante e persistente. Un capolavoro toscano."
+        details: "Un Vin Santo tradizionale, invecchiato per anni in caratelli. Un nettare ambrato, denso e complesso. Note di caramello, caffè, nocciola tostata, fichi secchi e spezie. L'acidità bilancia perfettamente la dolcezza, rendendolo elegante e persistente. Un capolavoro toscano.",
+        alcohol: 16
     },
     {
         id: 'p9',
         name: "Grappa Nonino Riserva",
         producer: "Nonino",
-        vintage: "NV",
+        vintage: "",
         region: "Friuli",
         country: "Italia",
         type: "Passiti/Distillati",
         grape: "Blend",
         price: 50,
         denomination: "Grappa del Friuli I.G.",
-        description: "Morbida, vaniglia, mandorla, elegante."
+        description: "Morbida, vaniglia, mandorla, elegante.",
+        alcohol: 41
     },
     {
         id: 'p10',
@@ -1525,7 +1630,8 @@ const wines: WineItem[] = [
         grape: "Zibibbo",
         price: 70,
         denomination: "Passito di Pantelleria DOC",
-        description: "Sole, datteri, spezie, non stucchevole."
+        description: "Sole, datteri, spezie, non stucchevole.",
+        alcohol: 14.5
     },
 
 

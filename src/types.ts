@@ -11,6 +11,7 @@ export interface WineItem {
     description: string;
     denomination: string;
     details?: string;
+    alcohol: number;
 }
 
 

@@ -31,8 +31,13 @@ const { wine } = Astro.props;
                 <span class="wine-region">
                     {wine.region}, {wine.country}
                 </span>
-                <span class="wine-vintage">
-                    {wine.vintage}
+                {
+                    wine.vintage && (
+                        <span class="wine-vintage">{wine.vintage}</span>
+                    )
+                }
+                <span class="wine-alcohol">
+                    Vol. {wine.alcohol}%
                 </span>
             </div>
         </div>
