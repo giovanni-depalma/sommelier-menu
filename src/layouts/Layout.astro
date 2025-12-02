@@ -26,5 +26,13 @@ const { title, bodyClass } = Astro.props;
 	</head>
 	<body class={bodyClass}>
 		<slot />
+		<script>
+			if (
+				new URLSearchParams(window.location.search).get("pdf") ===
+				"true"
+			) {
+				document.body.classList.add("is-pdf-generation");
+			}
+		</script>
 	</body>
 </html>

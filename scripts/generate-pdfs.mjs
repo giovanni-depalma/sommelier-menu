@@ -20,6 +20,10 @@ function createStaticServer(port) {
                     source: '/sommelier-menu/_astro/:path',
                     destination: '/_astro/:path',
                 },
+                {
+                    source: '/sommelier-menu/:path',
+                    destination: '/:path',
+                },
             ],
         });
     });
@@ -77,14 +81,14 @@ async function main() {
 
         // Generate Menu PDF
         await generatePDF(
-            `${baseUrl}/menu/`,
+            `${baseUrl}/menu/?pdf=true`,
             join(distPath, 'menu.pdf'),
             'Menu PDF'
         );
 
         // Generate Wines PDF
         await generatePDF(
-            `${baseUrl}/wines/`,
+            `${baseUrl}/wines/?pdf=true`,
             join(distPath, 'wines.pdf'),
             'Carta dei Vini PDF'
         );

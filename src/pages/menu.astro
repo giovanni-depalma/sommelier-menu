@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import menu from "../data/menu";
 import wines from "../data/wines";
+import PdfCover from "../components/PdfCover.astro";
 
 import QRCode from "qrcode";
 
@@ -15,6 +16,11 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
 ---
 
 <Layout title="Menu - Restaurante Fusión">
+    <PdfCover
+        qrCodeUrl={qrCodeUrl}
+        title="Menu"
+        description="Scopri le nostre proposte culinarie, un viaggio tra sapori autentici e innovazione."
+    />
     <header class="page-header">
         <h1>Menu</h1>
         <a href={import.meta.env.BASE_URL} class="back-link"
@@ -26,11 +32,6 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
             download>📄 Scarica PDF</a
         >
     </header>
-
-    <div class="print-only qr-code-header">
-        <img src={qrCodeUrl} alt="QR Code Menu" />
-        <p>Scansiona per vedere il menu online</p>
-    </div>
 
     <div class="content-container" id="menu-container">
         {
@@ -56,13 +57,13 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
                                         class="pairing-link"
                                     >
                                         <span class="pairing-line">
-                                            <span class="flag">🇪🇸</span>{" "}
+                                            <span class="flag">ES</span>{" "}
                                             {getWineName(
                                                 item.pairingSpanish.wineId,
                                             )}
                                         </span>
                                         <span class="pairing-line">
-                                            <span class="flag">🇮🇹</span>{" "}
+                                            <span class="flag">IT</span>{" "}
                                             {getWineName(
                                                 item.pairingItalian.wineId,
                                             )}
@@ -106,8 +107,9 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
     }
 
     .flag {
-        font-size: 1.1em;
+        font-size: 0.9em;
         margin-right: 0.3rem;
+        font-weight: bold;
     }
 
     .info-text {
