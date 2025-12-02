@@ -33,7 +33,7 @@ function createStaticServer(port) {
     return server;
 }
 
-async function generatePDF(url, outputPath, title) {
+async function generatePDF(url, outputPath, title, margin = { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' }) {
     console.log(`Generating ${title}...`);
 
     const browser = await chromium.launch();
@@ -51,12 +51,7 @@ async function generatePDF(url, outputPath, title) {
             path: outputPath,
             format: 'A4',
             printBackground: true,
-            margin: {
-                top: '1cm',
-                right: '1cm',
-                bottom: '1cm',
-                left: '1cm'
-            }
+            margin
         });
 
         console.log(`✓ Generated ${title}`);
@@ -90,7 +85,8 @@ async function main() {
         await generatePDF(
             `${baseUrl}/wines/?pdf=true`,
             join(distPath, 'wines.pdf'),
-            'Carta dei Vini PDF'
+            'Carta dei Vini PDF',
+            { top: '1cm', right: '0cm', bottom: '1cm', left: '0cm' }
         );
 
         console.log('\n✓ All PDFs generated successfully!');

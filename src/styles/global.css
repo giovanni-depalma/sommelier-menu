@@ -280,6 +280,11 @@ h4 {
         margin-bottom: 1rem;
     }
 
+    .content-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .page-header h1 {
         color: black;
         font-size: 1.5rem;
@@ -360,7 +365,7 @@ h4 {
     }
 
     .print-only img {
-        max-width: 120px;
+        max-width: 100%;
         height: auto;
     }
 
