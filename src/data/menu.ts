@@ -11,7 +11,7 @@ const menu: MenuCategory[] = [
                 price: 28,
                 pairingSpanish: {
                     wineId: "s1",
-                    reason: "L'acidità tagliente e le bollicine fini del Cava Reserva puliscono il palato dalla grasso dolce e avvolgente del prosciutto iberico."
+                    reason: "L'acidità tagliente e le bollicine fini del Cava Reserva puliscono il palato dal grasso dolce e avvolgente del prosciutto iberico."
                 },
                 pairingItalian: {
                     wineId: "i1",

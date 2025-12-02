@@ -1241,7 +1241,7 @@ const wines: WineItem[] = [
         type: "Rossi",
         grape: "Nebbiolo",
         price: 250,
-        denomination: "Langhe DOC Nebbiolo", // Gaja ha declassato i suoi cru a Langhe DOC
+        denomination: "Barbaresco DOCG", // Gaja ha declassato i suoi cru a Langhe DOC
         description: "Potente, concentrato, erbe aromatiche, minerale.",
         details: "Angelo Gaja ha rivoluzionato il Piemonte. Sorì San Lorenzo è il suo cru più potente e austero. Un Barbaresco concentrato, scuro, con note di erbe aromatiche, liquirizia, catrame e frutta nera. Struttura tannica imponente e grande potenziale di invecchiamento."
     },
@@ -1367,7 +1367,7 @@ const wines: WineItem[] = [
         type: "Rossi",
         grape: "Bordeaux blend",
         price: 90,
-        denomination: "Trentino DOC",
+        denomination: "Vigneti delle Dolomiti IGT",
         description: "Aristocratico, peperone, eleganza nordica.",
         details: "Un 'Bordeaux' alpino. San Leonardo è un blend di Cabernet Sauvignon, Carmenère e Merlot. Un vino aristocratico, con note di peperone verde, grafite, tabacco e frutti di bosco. Eleganza nordica, freschezza e grande potenziale di invecchiamento."
     },
@@ -1497,7 +1497,7 @@ const wines: WineItem[] = [
         type: "Passiti/Distillati",
         grape: "Trebbiano, Malvasia",
         price: 250,
-        denomination: "Vin Santo del Chianti Classico DOC Riserva",
+        denomination: "Vin Santo di Montepulciano DOC",
         description: "Denso, caramello, caffè, acidità incredibile.",
         details: "Un Vin Santo tradizionale, invecchiato per anni in caratelli. Un nettare ambrato, denso e complesso. Note di caramello, caffè, nocciola tostata, fichi secchi e spezie. L'acidità bilancia perfettamente la dolcezza, rendendolo elegante e persistente. Un capolavoro toscano."
     },
