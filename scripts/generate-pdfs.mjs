@@ -74,18 +74,32 @@ async function main() {
 
         const baseUrl = `http://localhost:${port}`;
 
+        // Generate Menu Cover PDF
+        await generatePDF(
+            `${baseUrl}/menu-cover/`,
+            join(distPath, 'menu-cover.pdf'),
+            'Menu Cover'
+        );
+
         // Generate Menu PDF
         await generatePDF(
-            `${baseUrl}/menu/?pdf=true`,
+            `${baseUrl}/menu/`,
             join(distPath, 'menu.pdf'),
-            'Menu PDF'
+            'Menu'
+        );
+
+        // Generate Wines Cover PDF
+        await generatePDF(
+            `${baseUrl}/wines-cover/`,
+            join(distPath, 'wines-cover.pdf'),
+            'Wines Cover'
         );
 
         // Generate Wines PDF
         await generatePDF(
-            `${baseUrl}/wines/?pdf=true`,
+            `${baseUrl}/wines/`,
             join(distPath, 'wines.pdf'),
-            'Carta dei Vini PDF',
+            'Wines',
             { top: '1cm', right: '0cm', bottom: '1cm', left: '0cm' }
         );
 

@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import QRCode from "qrcode";
+
+const fullUrl = new URL("/wines", Astro.site).href;
+const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
+---
+
+<Layout
+    title="Carta dei Vini Cover - La Vigna Iberica"
+    bodyClass="is-pdf-generation"
+>
+    <div class="pdf-cover-page">
+        <div class="cover-content">
+            <img
+                src={`${import.meta.env.BASE_URL}/logo_print.png`}
+                alt="Logo"
+                class="cover-logo"
+            />
+            <h1 class="cover-title">Carta dei Vini</h1>
+            <div class="cover-qr">
+                <img src={qrCodeUrl} alt="QR Code" />
+            </div>
+            <p class="cover-description">
+                Esplora la nostra selezione di vini pregiati, curata con
+                passione per accompagnare i tuoi momenti speciali.
+            </p>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .pdf-cover-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 2cm 1cm;
+        width: 100%;
+        text-align: center;
+        background: white;
+        box-sizing: border-box;
+    }
+
+    .cover-logo {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+        height: auto;
+    }
+
+    .cover-title {
+        font-family: "Cinzel", serif;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .cover-qr img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
+    }
+
+    .cover-description {
+        font-family: "Lato", sans-serif;
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 500px;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+</style>

@@ -1,8 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import wines from "../data/wines";
-import QRCode from "qrcode";
-import PdfCover from "../components/PdfCover.astro";
 import WineCard from "../components/WineCard.astro";
 import {
     groupWinesByTypeCountryRegion,
@@ -11,17 +9,9 @@ import {
 
 // Group wines using utility function
 const categories = groupWinesByTypeCountryRegion(wines);
-
-const fullUrl = new URL(Astro.url.pathname, Astro.site).href;
-const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
 ---
 
-<Layout title="Carta dei Vini - Restaurante Fusión">
-    <PdfCover
-        qrCodeUrl={qrCodeUrl}
-        title="Carta dei Vini"
-        description="Esplora la nostra selezione di vini pregiati, curata con passione per accompagnare i tuoi momenti speciali."
-    />
+<Layout title="Carta dei Vini - La Vigna Iberica">
     <header class="page-header">
         <h1>Carta dei Vini</h1>
         <a href={import.meta.env.BASE_URL} class="back-link"
