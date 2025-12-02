@@ -861,7 +861,8 @@ const wines: WineItem[] = [
         price: 1200,
         denomination: "D.O. Ribera del Duero",
         description: "Cult wine, concentrato, potente, vellutato.",
-        details: "Uno dei vini più rari e costosi al mondo, creato da Peter Sisseck. Proveniente da piccolissime parcelle di vigne vecchissime (oltre 80 anni). Pingus è la quintessenza del Tinto Fino: concentrato, potente ma incredibilmente vellutato e bilanciato. Note di mora, cioccolato, caffè e mineralità."
+        details: "Uno dei vini più rari e costosi al mondo, creato da Peter Sisseck. Proveniente da piccolissime parcelle di vigne vecchissime (oltre 80 anni). Pingus è la quintessenza del Tinto Fino: concentrato, potente ma incredibilmente vellutato e bilanciato. Note di mora, cioccolato, caffè e mineralità.",
+        alcohol: 14.5
     },
     {
         id: 're4',

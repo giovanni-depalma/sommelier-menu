@@ -382,7 +382,91 @@ h4 {
         font-size: 2.5rem;
     }
 
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .nav-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .content-container {
+        padding: 0 1rem 2rem;
+    }
+
+    .page-header {
+        padding: 2rem 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
     .item-card {
         flex-direction: column;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .item-header {
+        margin-bottom: 0.75rem;
+    }
+
+    .item-name {
+        font-size: 1.1rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .item-denomination {
+        float: none;
+        display: inline-block;
+        margin: 0.5rem 0;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .item-price {
+        float: none;
+        display: block;
+        margin: 0.5rem 0 0 0;
+        font-size: 1.2rem;
+    }
+
+    .wine-details {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .wine-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+
+    .content-container {
+        padding: 0 0.4rem 2rem;
+    }
+
+    .item-denomination {
+        padding: 0.2rem 0.2rem;
     }
 }

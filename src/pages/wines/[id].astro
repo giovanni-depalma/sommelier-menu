@@ -219,13 +219,45 @@ const { wine } = Astro.props;
         color: #4285f4;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+        .container {
+            padding: 1.5rem 1rem;
+        }
+
         .wine-detail-card {
             padding: 1.5rem;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .wine-meta {
+            font-size: 1rem;
+        }
+
+        .wine-info-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .description-text {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .wine-detail-card {
+            padding: 1rem;
+        }
+
+        .wine-info-grid {
+            padding: 0.75rem;
         }
     }
 </style>

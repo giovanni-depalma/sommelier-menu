@@ -108,6 +108,15 @@ const qrCodeUrl = await QRCode.toDataURL(fullUrl, { width: 150 });
         font-weight: 600;
     }
 
+    @media (max-width: 480px) {
+        .country-section {
+            padding-left: 0.2rem;
+        }
+        .region-group {
+            padding-left: 0.4rem;
+        }
+    }
+
     @media print {
         .country-title {
             font-size: 1.4rem;
