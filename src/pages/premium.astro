@@ -1,0 +1,324 @@
+---
+import Layout from "../layouts/Layout.astro";
+import wines from "../data/wines";
+import { formatCurrency } from "../utils/format";
+
+// Filter and sort premium wines
+const premiumWines = wines
+    .filter((wine) => wine.price >= 200)
+    .sort((a, b) => b.price - a.price);
+
+const title = "Collezione Grandi Vini - Sommelier Menu";
+---
+
+<Layout title={title}>
+    <main class="premium-page">
+        <header class="premium-header">
+            <a href={import.meta.env.BASE_URL} class="back-link"
+                >← Torna alla Home</a
+            >
+            <div class="header-content">
+                <h1>I Grandi Vini</h1>
+                <p class="subtitle">
+                    Una selezione didattica delle eccellenze enologiche
+                    mondiali. Vini che hanno fatto la storia, con quotazioni
+                    superiori a 200€.
+                </p>
+            </div>
+        </header>
+
+        <section class="wines-container">
+            {
+                premiumWines.map((wine) => (
+                    <article class="premium-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="header-main">
+                                    <h2>
+                                        <a
+                                            href={`${import.meta.env.BASE_URL}/wines/${wine.id}`}
+                                            class="wine-link"
+                                        >
+                                            {wine.name}
+                                        </a>
+                                    </h2>
+                                    <span class="producer">
+                                        {wine.producer}
+                                    </span>
+                                </div>
+                                <div class="price-tag">
+                                    {formatCurrency(wine.price)}
+                                </div>
+                            </div>
+
+                            <div class="wine-meta">
+                                <span class="meta-item region">
+                                    {wine.region}, {wine.country}
+                                </span>
+                                {wine.vintage && (
+                                    <span class="meta-item vintage">
+                                        {wine.vintage}
+                                    </span>
+                                )}
+                                <span class="meta-item type">{wine.type}</span>
+                            </div>
+
+                            <div class="description-box">
+                                <p class="details">
+                                    {wine.details || wine.description}
+                                </p>
+                            </div>
+
+                            <div class="card-footer">
+                                <span class="grapes">{wine.grape}</span>
+                                <a
+                                    href={`${import.meta.env.BASE_URL}/wines/${wine.id}`}
+                                    class="details-btn"
+                                >
+                                    Scheda Tecnica →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                ))
+            }
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .premium-page {
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+    }
+
+    .premium-header {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&q=80&w=2070")
+                center/cover no-repeat;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        margin-bottom: 4rem;
+        border-bottom: 4px solid var(--color-gold, #c5a059);
+    }
+
+    .back-link {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-family: var(--font-accent, serif);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        transition: all 0.2s;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .back-link:hover {
+        background: rgba(255, 255, 255, 0.5);
+        color: #fff;
+    }
+
+    .header-content h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 4rem;
+        color: var(--color-gold, #c5a059);
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        max-width: 600px;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    .wines-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .premium-card {
+        background: #252525;
+        border: 1px solid #333;
+        border-radius: 8px;
+        overflow: hidden;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        position: relative;
+    }
+
+    .premium-card:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-color: var(--color-gold, #c5a059);
+    }
+
+    /* Elegant gold line on the left */
+    .premium-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--color-gold, #c5a059);
+    }
+
+    .card-content {
+        padding: 2.5rem;
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 1.5rem;
+    }
+
+    .header-main h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.1;
+    }
+
+    .wine-link {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .wine-link:hover {
+        color: var(--color-gold, #c5a059);
+    }
+
+    .producer {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #aaa;
+    }
+
+    .price-tag {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-gold, #c5a059);
+        font-family: "Playfair Display", serif;
+    }
+
+    .wine-meta {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        color: #ccc;
+    }
+
+    .meta-item {
+        position: relative;
+    }
+
+    .meta-item:not(:last-child)::after {
+        content: "•";
+        position: absolute;
+        right: -0.9rem;
+        color: #555;
+    }
+
+    .description-box {
+        margin-bottom: 2rem;
+    }
+
+    .details {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #ddd;
+        font-style: italic;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .grapes {
+        font-size: 0.9rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .details-btn {
+        color: var(--color-gold, #c5a059);
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid var(--color-gold, #c5a059);
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        transition: all 0.2s;
+    }
+
+    .details-btn:hover {
+        background: var(--color-gold, #c5a059);
+        color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .card-header {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+        }
+
+        .wine-meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .meta-item:not(:last-child)::after {
+            display: none;
+        }
+
+        .card-footer {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .details-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
