@@ -6,7 +6,11 @@ interface Props {
 }
 ---
 
-<div id="zone-detail-panel" class="zone-detail-panel hidden">
+<div
+    id="zone-detail-panel"
+    class="zone-detail-panel hidden"
+    data-base-url={import.meta.env.BASE_URL}
+>
     <div class="panel-content">
         <button id="close-panel" class="close-btn" aria-label="Close details"
             >&times;</button
@@ -109,7 +113,7 @@ interface Props {
                                     <div class="item-info">
                                         <div class="item-header">
                                             <h3 class="item-name">
-                                                <a href="/wines/${wine.id}" class="wine-link">${wine.name}</a>
+                                                <a href="${panel?.dataset.baseUrl || ""}/wines/${wine.id}" class="wine-link">${wine.name}</a>
                                             </h3>
                                         </div>
                                         <div class="wine-item">
