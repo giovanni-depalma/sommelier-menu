@@ -66,6 +66,30 @@ const { wine } = Astro.props;
 
             <div class="wine-actions">
                 <a
+                    href={`${import.meta.env.BASE_URL}/map?region=${wine.region}`}
+                    class="map-link-button"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polygon
+                            points="3 6 9 12 15 6 21 3 21 21 15 18 9 24 3 21 3 6"
+                        ></polygon>
+                        <line x1="9" y1="22" x2="9" y2="12"></line>
+                        <line x1="15" y1="18" x2="15" y2="6"></line>
+                    </svg>
+                    Vedi nella Mappa
+                </a>
+
+                <a
                     href={`https://www.google.com/search?q=${encodeURIComponent(`${wine.producer} ${wine.name} ${wine.vintage} wine`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -197,6 +221,26 @@ const { wine } = Astro.props;
         margin-top: 2rem;
         padding-top: 2rem;
         border-top: 1px solid #eee;
+    }
+
+    .map-link-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--color-gold, #c5a059);
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.2s;
+        margin-right: 1rem;
+    }
+
+    .map-link-button:hover {
+        background-color: #b08d45;
+        transform: translateY(-2px);
     }
 
     .google-search-button {

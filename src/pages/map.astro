@@ -6,6 +6,11 @@ import ZoneDetail from "../components/ZoneDetail.astro";
 
 <Layout title="Mappa dei Vini">
     <main class="map-page">
+        <header>
+            <a href={import.meta.env.BASE_URL} class="back-link"
+                >← Torna alla Home</a
+            >
+        </header>
         <div class="map-wrapper">
             <MapComponent />
         </div>
@@ -21,6 +26,47 @@ import ZoneDetail from "../components/ZoneDetail.astro";
         position: relative;
         overflow: hidden;
         background: #000;
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem; /* Slightly taller for elegance */
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 5rem;
+        align-items: center;
+        z-index: 1000;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        pointer-events: none; /* Let clicks pass through to map */
+    }
+
+    .back-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-family: var(--font-accent, serif);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        pointer-events: auto; /* Re-enable clicks for the link */
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .back-link:hover {
+        color: var(--color-gold, #c5a059);
+        background: rgba(0, 0, 0, 0.6);
+        border-color: var(--color-gold, #c5a059);
     }
 
     .close-map {
