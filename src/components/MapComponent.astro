@@ -11,19 +11,24 @@ import "leaflet/dist/leaflet.css";
 
     let map: L.Map | null = null;
 
+    const saveMapState = () => {
+        if (!map) return;
+        const center = map.getCenter();
+        sessionStorage.setItem("map-center-lat", center.lat.toString());
+        sessionStorage.setItem("map-center-lng", center.lng.toString());
+        sessionStorage.setItem("map-zoom", map.getZoom().toString());
+    };
+
+    // Save state only when navigating away
+    document.addEventListener("astro:before-swap", saveMapState);
+    window.addEventListener("pagehide", saveMapState);
+
     // Fix for default marker icons not showing up in prod builds sometimes
     // We'll use a custom divIcon or SVG to look "premium" anyway
 
     document.addEventListener("astro:page-load", () => {
         initMap();
     });
-
-    // Fallback for non-ViewTransitions navigation
-    if (document.readyState === "complete") {
-        initMap();
-    } else {
-        document.addEventListener("DOMContentLoaded", initMap);
-    }
 
     function initMap() {
         const mapContainer = document.getElementById("map");
@@ -35,8 +40,21 @@ import "leaflet/dist/leaflet.css";
             map = null;
         }
 
-        // Center on Mediterranean (between Italy and Spain)
-        map = L.map("map").setView([41.5, 6.5], 5);
+        // Check for saved state
+        const savedLat = sessionStorage.getItem("map-center-lat");
+        const savedLng = sessionStorage.getItem("map-center-lng");
+        const savedZoom = sessionStorage.getItem("map-zoom");
+
+        let initialCenter: [number, number] = [41.5, 6.5];
+        let initialZoom = 5;
+
+        if (savedLat && savedLng && savedZoom) {
+            initialCenter = [parseFloat(savedLat), parseFloat(savedLng)];
+            initialZoom = parseInt(savedZoom);
+        }
+
+        // Center on Mediterranean (between Italy and Spain) or saved position
+        map = L.map("map").setView(initialCenter, initialZoom);
 
         // Dark/Premium theme tiles
         // Using CartoDB Dark Matter for a sleek look that fits premium aesthetic
@@ -94,7 +112,9 @@ import "leaflet/dist/leaflet.css";
                     [region.coordinates.lat, region.coordinates.lng],
                     8,
                     {
-                        animate: false,
+                        animate: true,
+                        duration: 1.2,
+                        easeLinearity: 0.25,
                     },
                 );
 

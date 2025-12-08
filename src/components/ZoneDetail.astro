@@ -1,6 +1,5 @@
 ---
 import type { RegionData } from "../data/regions";
-import type { WineItem } from "../types";
 
 interface Props {
     startRegion?: RegionData;
@@ -35,102 +34,122 @@ interface Props {
     import wines from "../data/wines";
     import type { WineItem } from "../types";
 
-    const panel = document.getElementById("zone-detail-panel");
-    const closeBtn = document.getElementById("close-panel");
-    const bottomCloseBtn = document.getElementById("bottom-close-btn");
-    const nameEl = document.getElementById("region-name");
-    const countryEl = document.getElementById("region-country");
-    const descEl = document.getElementById("region-description");
-    const winesListEl = document.getElementById("region-wines-list");
+    document.addEventListener("astro:page-load", () => {
+        // Query elements freshly on each page load
+        const panel = document.getElementById("zone-detail-panel");
+        const closeBtn = document.getElementById("close-panel");
+        const bottomCloseBtn = document.getElementById("bottom-close-btn");
+        const nameEl = document.getElementById("region-name");
+        const countryEl = document.getElementById("region-country");
+        const descEl = document.getElementById("region-description");
+        const winesListEl = document.getElementById("region-wines-list");
 
-    // Close panel logic
-    const closePanel = () => {
-        panel?.classList.add("hidden");
-        panel?.classList.remove("visible");
-    };
+        // Close panel logic
+        const closePanel = () => {
+            if (!panel) return;
+            panel.classList.add("hidden");
+            panel.classList.remove("visible");
+        };
 
-    closeBtn?.addEventListener("click", closePanel);
-    bottomCloseBtn?.addEventListener("click", closePanel);
+        // Attach listeners to new DOM elements
+        closeBtn?.addEventListener("click", closePanel);
+        bottomCloseBtn?.addEventListener("click", closePanel);
 
-    // Listen for region selection from MapComponent
-    document.addEventListener("region-selected", (e: Event) => {
-        const customEvent = e as CustomEvent;
-        const region = customEvent.detail;
-        if (!region || !panel) return;
+        // Define handler closing over proper scope
+        const handleRegionSelected = (e: Event) => {
+            const customEvent = e as CustomEvent;
+            const region = customEvent.detail;
 
-        // Populate Data
-        if (nameEl) nameEl.textContent = region.name;
-        if (countryEl) countryEl.textContent = region.country;
-        if (descEl) descEl.textContent = region.description;
+            // Check scope validity
+            if (!region || !panel) return;
 
-        // Filter wines
-        // Matches region.id to wine.region (exact match or partial?)
-        // The data we extracted earlier suggests exact matches usually, but let's be safe
-        const regionWines = wines.filter(
-            (w: WineItem) =>
-                w.region === region.id || w.region.includes(region.id),
-        );
+            // Populate Data
+            if (nameEl) nameEl.textContent = region.name;
+            if (countryEl) countryEl.textContent = region.country;
+            if (descEl) descEl.textContent = region.description;
 
-        if (winesListEl) {
-            winesListEl.innerHTML = "";
-            if (regionWines.length === 0) {
-                winesListEl.innerHTML =
-                    '<p class="no-wines">Nessun vino presente in carta per questa zona.</p>';
-            } else {
-                // Group by denomination
-                const grouped = regionWines.reduce(
-                    (acc: any, wine: WineItem) => {
-                        const denom = wine.denomination || "Altri Vini";
-                        if (!acc[denom]) acc[denom] = [];
-                        acc[denom].push(wine);
-                        return acc;
-                    },
-                    {},
-                );
+            // Filter wines
+            const regionWines = wines.filter(
+                (w: WineItem) =>
+                    w.region === region.id || w.region.includes(region.id),
+            );
 
-                Object.keys(grouped)
-                    .sort()
-                    .forEach((denom) => {
-                        // Create Denomination Header
-                        const denomHeader = document.createElement("h4");
-                        denomHeader.className = "denom-header";
-                        denomHeader.textContent = denom;
-                        winesListEl.appendChild(denomHeader);
+            if (winesListEl) {
+                winesListEl.innerHTML = "";
+                if (regionWines.length === 0) {
+                    winesListEl.innerHTML =
+                        '<p class="no-wines">Nessun vino presente in carta per questa zona.</p>';
+                } else {
+                    // Group by denomination
+                    const grouped = regionWines.reduce(
+                        (acc: any, wine: WineItem) => {
+                            const denom = wine.denomination || "Altri Vini";
+                            if (!acc[denom]) acc[denom] = [];
+                            acc[denom].push(wine);
+                            return acc;
+                        },
+                        {},
+                    );
 
-                        // Render wines for this denomination
-                        grouped[denom].forEach((wine: WineItem) => {
-                            const wineCard = document.createElement("div");
-                            wineCard.className = "item-card map-wine-item";
-                            // Replicating WineCard.astro structure
-                            wineCard.innerHTML = `
-                                <div class="item-info">
-                                    <div class="item-header">
-                                        <h3 class="item-name">
-                                            <a href="/wines/${wine.id}" class="wine-link">${wine.name}</a>
-                                        </h3>
-                                    </div>
-                                    <div class="wine-item">
-                                        <div class="wine-details">
-                                            <span class="wine-producer">${wine.producer}</span>
-                                            ${wine.vintage ? `<span class="wine-vintage">${wine.vintage}</span>` : ""}
-                                            <span class="wine-alcohol">Vol. ${wine.alcohol}%</span>
+                    Object.keys(grouped)
+                        .sort()
+                        .forEach((denom) => {
+                            // Create Denomination Header
+                            const denomHeader = document.createElement("h4");
+                            denomHeader.className = "denom-header";
+                            denomHeader.textContent = denom;
+                            winesListEl.appendChild(denomHeader);
+
+                            // Render wines for this denomination
+                            grouped[denom].forEach((wine: WineItem) => {
+                                const wineCard = document.createElement("div");
+                                wineCard.className = "item-card map-wine-item";
+                                // Replicating WineCard.astro structure
+                                wineCard.innerHTML = `
+                                    <div class="item-info">
+                                        <div class="item-header">
+                                            <h3 class="item-name">
+                                                <a href="/wines/${wine.id}" class="wine-link">${wine.name}</a>
+                                            </h3>
                                         </div>
+                                        <div class="wine-item">
+                                            <div class="wine-details">
+                                                <span class="wine-producer">${wine.producer}</span>
+                                                ${wine.vintage ? `<span class="wine-vintage">${wine.vintage}</span>` : ""}
+                                                <span class="wine-alcohol">Vol. ${wine.alcohol}%</span>
+                                            </div>
+                                        </div>
+                                        <p class="item-desc">${wine.description}</p>
+                                        <p class="item-meta">${wine.grape}</p>
                                     </div>
-                                    <p class="item-desc">${wine.description}</p>
-                                    <p class="item-meta">${wine.grape}</p>
-                                </div>
-                            `;
-                            winesListEl.appendChild(wineCard);
+                                `;
+                                winesListEl.appendChild(wineCard);
+                            });
                         });
-                    });
+                }
             }
-        }
 
-        // Show Panel
-        panel.classList.remove("hidden");
-        setTimeout(() => {
-            panel.classList.add("visible");
-        }, 10);
+            // Show Panel
+            panel.classList.remove("hidden");
+            setTimeout(() => {
+                panel.classList.add("visible");
+            }, 10);
+        };
+
+        // Attach global listener
+        document.addEventListener("region-selected", handleRegionSelected);
+
+        // Cleanup on navigation
+        document.addEventListener(
+            "astro:before-swap",
+            () => {
+                document.removeEventListener(
+                    "region-selected",
+                    handleRegionSelected,
+                );
+            },
+            { once: true },
+        );
     });
 </script>
 

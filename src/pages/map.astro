@@ -6,11 +6,6 @@ import ZoneDetail from "../components/ZoneDetail.astro";
 
 <Layout title="Mappa dei Vini">
     <main class="map-page">
-        <header class="map-header">
-            <h1>Esplora le Zone</h1>
-            <a href="/wines-cover" class="close-map">✕</a>
-        </header>
-
         <div class="map-wrapper">
             <MapComponent />
         </div>
@@ -26,23 +21,6 @@ import ZoneDetail from "../components/ZoneDetail.astro";
         position: relative;
         overflow: hidden;
         background: #000;
-    }
-
-    .map-header {
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-        z-index: 500;
-        pointer-events: none; /* Let clicks pass through transparent areas */
-    }
-
-    .map-header h1 {
-        color: #fff;
-        font-family: var(--font-heading, serif);
-        font-size: 3rem;
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-        margin: 0;
-        pointer-events: auto;
     }
 
     .close-map {
