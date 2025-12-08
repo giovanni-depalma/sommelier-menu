@@ -1,0 +1,156 @@
+---
+import { regions } from "../data/regions";
+import "leaflet/dist/leaflet.css";
+---
+
+<div id="map" class="map-container"></div>
+
+<script>
+    import L from "leaflet";
+    import { regions } from "../data/regions";
+
+    let map: L.Map | null = null;
+
+    // Fix for default marker icons not showing up in prod builds sometimes
+    // We'll use a custom divIcon or SVG to look "premium" anyway
+
+    document.addEventListener("astro:page-load", () => {
+        initMap();
+    });
+
+    // Fallback for non-ViewTransitions navigation
+    if (document.readyState === "complete") {
+        initMap();
+    } else {
+        document.addEventListener("DOMContentLoaded", initMap);
+    }
+
+    function initMap() {
+        const mapContainer = document.getElementById("map");
+        if (!mapContainer) return;
+
+        // Prevent re-initialization
+        if (map) {
+            map.remove();
+            map = null;
+        }
+
+        // Center on Mediterranean (between Italy and Spain)
+        map = L.map("map").setView([41.5, 6.5], 5);
+
+        // Dark/Premium theme tiles
+        // Using CartoDB Dark Matter for a sleek look that fits premium aesthetic
+        L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            {
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: "abcd",
+                maxZoom: 20,
+            },
+        ).addTo(map);
+
+        const customIcon = L.divIcon({
+            className: "custom-pin",
+            html: `<div class="pin-inner"></div>`,
+            iconSize: [24, 24],
+            iconAnchor: [12, 12],
+        });
+
+        const activeIcon = L.divIcon({
+            className: "custom-pin active",
+            html: `<div class="pin-inner"></div>`,
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+        });
+
+        // Track active marker
+        let currentActiveMarker: L.Marker | null = null;
+
+        regions.forEach((region) => {
+            if (!map) return;
+            const marker = L.marker(
+                [region.coordinates.lat, region.coordinates.lng],
+                {
+                    icon: customIcon,
+                    title: region.name,
+                },
+            ).addTo(map);
+
+            marker.on("click", () => {
+                // Reset previous active marker
+                if (currentActiveMarker) {
+                    currentActiveMarker.setIcon(customIcon);
+                    currentActiveMarker.setZIndexOffset(0);
+                }
+
+                // Set new active marker
+                marker.setIcon(activeIcon);
+                marker.setZIndexOffset(1000);
+                currentActiveMarker = marker;
+
+                // Center map on marker with animation
+                map?.flyTo(
+                    [region.coordinates.lat, region.coordinates.lng],
+                    8,
+                    {
+                        animate: true,
+                        duration: 1.5,
+                    },
+                );
+
+                // Dispatch event for parent component to handle details
+                const event = new CustomEvent("region-selected", {
+                    detail: region,
+                });
+                document.dispatchEvent(event);
+            });
+        });
+    }
+</script>
+
+<style>
+    .map-container {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        background-color: #1a1a1a;
+        z-index: 1;
+    }
+</style>
+
+<style is:global>
+    /* Premium Pin Styling */
+    .custom-pin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .pin-inner {
+        width: 12px;
+        height: 12px;
+        background-color: var(
+            --color-gold
+        ); /* Using global gold variable if available, else fallback */
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        transition: all 0.3s ease;
+    }
+
+    .custom-pin:hover .pin-inner {
+        transform: scale(1.5);
+        background-color: #fff;
+        border-color: var(--color-gold);
+    }
+
+    .custom-pin.active .pin-inner {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-color: var(--color-gold);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+</style>

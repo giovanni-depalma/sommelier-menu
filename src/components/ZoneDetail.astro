@@ -1,0 +1,343 @@
+---
+import type { RegionData } from "../data/regions";
+import type { WineItem } from "../types";
+
+interface Props {
+    startRegion?: RegionData;
+}
+---
+
+<div id="zone-detail-panel" class="zone-detail-panel hidden">
+    <div class="panel-content">
+        <button id="close-panel" class="close-btn" aria-label="Close details"
+            >&times;</button
+        >
+
+        <div class="region-header">
+            <span id="region-country" class="region-country"></span>
+            <h2 id="region-name" class="region-title"></h2>
+        </div>
+
+        <p id="region-description" class="region-description"></p>
+
+        <div class="wines-section">
+            <h3>Vini in Carta</h3>
+            <div id="region-wines-list" class="wines-list">
+                <!-- Wines will be injected here via JS -->
+            </div>
+        </div>
+
+        <button id="bottom-close-btn" class="back-link">← Chiudi Scheda</button>
+    </div>
+</div>
+
+<script>
+    import wines from "../data/wines";
+    import type { WineItem } from "../types";
+
+    const panel = document.getElementById("zone-detail-panel");
+    const closeBtn = document.getElementById("close-panel");
+    const bottomCloseBtn = document.getElementById("bottom-close-btn");
+    const nameEl = document.getElementById("region-name");
+    const countryEl = document.getElementById("region-country");
+    const descEl = document.getElementById("region-description");
+    const winesListEl = document.getElementById("region-wines-list");
+
+    // Close panel logic
+    const closePanel = () => {
+        panel?.classList.add("hidden");
+        panel?.classList.remove("visible");
+    };
+
+    closeBtn?.addEventListener("click", closePanel);
+    bottomCloseBtn?.addEventListener("click", closePanel);
+
+    // Listen for region selection from MapComponent
+    document.addEventListener("region-selected", (e: Event) => {
+        const customEvent = e as CustomEvent;
+        const region = customEvent.detail;
+        if (!region || !panel) return;
+
+        // Populate Data
+        if (nameEl) nameEl.textContent = region.name;
+        if (countryEl) countryEl.textContent = region.country;
+        if (descEl) descEl.textContent = region.description;
+
+        // Filter wines
+        // Matches region.id to wine.region (exact match or partial?)
+        // The data we extracted earlier suggests exact matches usually, but let's be safe
+        const regionWines = wines.filter(
+            (w: WineItem) =>
+                w.region === region.id || w.region.includes(region.id),
+        );
+
+        if (winesListEl) {
+            winesListEl.innerHTML = "";
+            if (regionWines.length === 0) {
+                winesListEl.innerHTML =
+                    '<p class="no-wines">Nessun vino presente in carta per questa zona.</p>';
+            } else {
+                // Group by denomination
+                const grouped = regionWines.reduce(
+                    (acc: any, wine: WineItem) => {
+                        const denom = wine.denomination || "Altri Vini";
+                        if (!acc[denom]) acc[denom] = [];
+                        acc[denom].push(wine);
+                        return acc;
+                    },
+                    {},
+                );
+
+                Object.keys(grouped)
+                    .sort()
+                    .forEach((denom) => {
+                        // Create Denomination Header
+                        const denomHeader = document.createElement("h4");
+                        denomHeader.className = "denom-header";
+                        denomHeader.textContent = denom;
+                        winesListEl.appendChild(denomHeader);
+
+                        // Render wines for this denomination
+                        grouped[denom].forEach((wine: WineItem) => {
+                            const wineCard = document.createElement("div");
+                            wineCard.className = "item-card map-wine-item";
+                            // Replicating WineCard.astro structure
+                            wineCard.innerHTML = `
+                                <div class="item-info">
+                                    <div class="item-header">
+                                        <h3 class="item-name">
+                                            <a href="/wines/${wine.id}" class="wine-link">${wine.name}</a>
+                                        </h3>
+                                    </div>
+                                    <div class="wine-item">
+                                        <div class="wine-details">
+                                            <span class="wine-producer">${wine.producer}</span>
+                                            ${wine.vintage ? `<span class="wine-vintage">${wine.vintage}</span>` : ""}
+                                            <span class="wine-alcohol">Vol. ${wine.alcohol}%</span>
+                                        </div>
+                                    </div>
+                                    <p class="item-desc">${wine.description}</p>
+                                    <p class="item-meta">${wine.grape}</p>
+                                </div>
+                            `;
+                            winesListEl.appendChild(wineCard);
+                        });
+                    });
+            }
+        }
+
+        // Show Panel
+        panel.classList.remove("hidden");
+        setTimeout(() => {
+            panel.classList.add("visible");
+        }, 10);
+    });
+</script>
+
+<style>
+    .zone-detail-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100vh;
+        background: var(--light-bg, #f9f9f9); /* Light background */
+        backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        color: var(--text-color, #333);
+    }
+
+    .zone-detail-panel.visible {
+        transform: translateX(0);
+    }
+
+    .hidden {
+        /* Keep it from blocking clicks when "hidden" but animating out */
+        pointer-events: none;
+    }
+    .zone-detail-panel.visible {
+        pointer-events: auto;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-color, #333);
+        font-size: 2rem;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+    }
+
+    .close-btn:hover {
+        opacity: 1;
+    }
+
+    .region-header {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .region-country {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        color: var(--color-gold, #c5a059);
+        margin-bottom: 0.5rem;
+    }
+
+    .region-title {
+        font-family: var(--font-heading, serif);
+        font-size: 2.5rem;
+        color: var(--wine-red, #722f37);
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    .region-description {
+        font-family: var(--font-body, sans-serif);
+        line-height: 1.6;
+        color: var(--text-color, #333);
+        margin-bottom: 3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 2rem;
+    }
+
+    .wines-section h3 {
+        font-family: var(--font-heading, serif);
+        color: var(--wine-red, #722f37);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .wines-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Inherit global styles where possible */
+
+    .back-link {
+        display: inline-block;
+        margin-top: 3rem;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        font-family: inherit;
+    }
+
+    .back-link:hover {
+        color: #333; /* Darker on hover for light theme */
+    }
+
+    @media (max-width: 768px) {
+        .zone-detail-panel {
+            width: 100%;
+        }
+    }
+</style>
+
+<style is:global>
+    /* Map Card Specific Overrides - Global because elements are injected via JS */
+
+    .denom-header {
+        font-family: var(--font-accent, serif);
+        color: var(--wine-red, #722f37);
+        font-size: 1.1rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .wines-list .denom-header:first-of-type {
+        margin-top: 0.5rem;
+    }
+
+    .map-wine-item {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 1rem;
+    }
+
+    .zone-detail-panel .wine-link {
+        color: var(--text-color, #333);
+        text-decoration: none;
+        border-bottom: 1px dotted #999;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+
+    .zone-detail-panel .wine-link:hover {
+        border-bottom: 1px solid #333;
+        color: #000;
+    }
+
+    .zone-detail-panel .map-wine-item .wine-details {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .zone-detail-panel .map-wine-item .wine-producer {
+        font-weight: 700;
+        color: #444;
+    }
+
+    .zone-detail-panel .map-wine-item .wine-vintage,
+    .zone-detail-panel .map-wine-item .wine-alcohol {
+        color: #555;
+    }
+
+    .zone-detail-panel .map-wine-item .item-desc {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+
+    .zone-detail-panel .map-wine-item .item-meta {
+        font-size: 0.85rem;
+        color: #888;
+        font-style: italic;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 3rem;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+    }
+
+    .back-link:hover {
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .zone-detail-panel {
+            width: 100%;
+        }
+    }
+</style>
